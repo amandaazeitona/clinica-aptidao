@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sections
   devise_for :admins, path: 'auth'
 
   root 'welcome#index'
