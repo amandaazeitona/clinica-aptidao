@@ -1,6 +1,2 @@
-<h1><%= @sections[0].contents[0].text + "|" + @sections[0].contents[1].text + "|" + @sections[0].contents[2].text + "|" + @sections[0].contents[3].text + "|" + @sections[0].contents[4].text %></h1>
-<% if admin_signed_in? %>
-  <span>Logado.</span> <br>
-  <%= link_to 'sign-out', destroy_admin_session_path, method: :delete %> <br>
-  <%= link_to 'edit', edit_section_path(@sections[0])  %>
-<% end %>
+<%= render '/welcome/navbar' %>
+<%= render '/welcome/header' %>

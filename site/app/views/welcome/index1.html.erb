@@ -1,0 +1,5 @@
+<% if admin_signed_in? %>
+  <span>Logado.</span> <br>
+  <%= link_to 'sign-out', destroy_admin_session_path, method: :delete %> <br>
+  <%= link_to 'edit', edit_section_path(@sections[0])  %>
+<% end %>
