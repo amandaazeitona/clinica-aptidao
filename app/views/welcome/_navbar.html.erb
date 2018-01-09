@@ -1,26 +1,32 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top new-color">
-    <div id="marged-container" class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a id="navbar-title" class="navbar-brand page-scroll" href="#page-top">Clínica Aptidão</a>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display --> 
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Clínica Aptidão</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right ">
+                <li>
+                    <a class="page-scroll" href="#"><%= @sections[0].contents[1].text %></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#"><%= @sections[0].contents[2].text %></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#"><%= @sections[0].contents[4].text %></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#"><i class="fa fa-facebook-square"></i></a> 
+                </li>
+            </ul>
+        </div>
       </div>
-      <div id="bs-exemple-navbar-collapse-1" class="collapse navbar-collapse">
-        <ul id="nav-options" class="nav navbar-nav navbar-right">
-          <li>
-            <a class="page-scroll" href="quemsomos"><%= @sections[0].contents[1].text %></a>
-          </li>
-          <li>
-            <a class="page-scroll" href="servicos"><%= @sections[0].contents[2].text %></a>
-          </li>
-          <li>
-            <a class="page-scroll" href="contato"><%= @sections[0].contents[4].text %></a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </nav>
