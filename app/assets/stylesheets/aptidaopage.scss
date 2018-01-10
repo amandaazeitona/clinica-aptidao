@@ -6,7 +6,6 @@ $aptidao-azul-dark: #2318be;
 //******************* NAVBAR *************************************************//
 .navbar-default {
     border-color: transparent;
-    height: 6em;
 }
 
 .container {
@@ -22,8 +21,17 @@ $aptidao-azul-dark: #2318be;
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    font-size: 35px;
+    font-size: 30px;
     @include v-align;
+}
+
+
+
+@media(min-width:768px) {
+  .navbar-default.affix .navbar-header .navbar-brand {
+      font-size: 16px;
+      color: $aptidao-azul;
+  }
 }
 
 
@@ -66,7 +74,7 @@ header .header-content .header-content-inner h1 {
 
 .box-diferencial {
     text-align: center;
-    
+
     >ul{
         list-style-type:none;
     }
@@ -99,14 +107,14 @@ header .header-content .header-content-inner h1 {
     }
 
     ul.nav.navbar-nav.navbar-right {
-        height: 100%; 
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
 
-    
+
+
 }
 
 @media(min-width:501px)and(max-width:799px) {
@@ -121,7 +129,7 @@ header .header-content .header-content-inner h1 {
     }
 
     ul.nav.navbar-nav.navbar-right {
-        height: 100%; 
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -148,7 +156,7 @@ header .header-content .header-content-inner h1 {
     }
 
 }
-    
+
 @media(max-width:500px) {
     .navbar-default {
         height: 4em;
