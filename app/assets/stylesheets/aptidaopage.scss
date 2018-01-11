@@ -66,10 +66,16 @@ header .header-content .header-content-inner h1 {
 
 .box-diferencial {
     text-align: center;
-    
-    >ul{
-        list-style-type:none;
+    font-size: 20px;
+    border-radius: 5px;
+
+    >.list-group {
+        color: #000;
     }
+}
+
+.about-container {
+    width: 50%;
 }
 
 
