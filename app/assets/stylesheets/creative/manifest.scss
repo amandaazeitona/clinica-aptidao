@@ -1,13 +1,6 @@
-/*
- *= require bootstrap
- *= require font_awesome
- *= require creative/animate.min.css
- *= require creative/creative.css
- *= require_self
-*/
+@import "bootstrap";
 
 $aptidao-azul: #1a128f;
 
-.bg-primary {
-    background-color: $aptidao-azul;
-}
+@import "creative";
+@import "animate.min";
