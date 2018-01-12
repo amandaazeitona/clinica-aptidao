@@ -71,7 +71,7 @@ header .header-content .header-content-inner h1 {
 
 .text-faded {
     font-size: 20px;
-} 
+}
 
 .container {
     width: 90%;
@@ -114,10 +114,18 @@ header .header-content .header-content-inner h1 {
         font-style: italic;
         margin-bottom: 0.5em;;
     }
-    
+
 }
 
+//******************* CONTATO ***********************************************//
 
+.map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//******************* RESPONSIVIDADE ****************************************//
 
 @media(min-width:800px){
     .container-fluid {
@@ -162,7 +170,6 @@ header .header-content .header-content-inner h1 {
         align-items: center;
     }
 
-    
     .panel {
         margin: 3em 6em;
     }
@@ -250,6 +257,12 @@ header .header-content .header-content-inner h1 {
         margin-bottom: 1.5em;
     }
 
+}
+
+@media (max-width: 675px) {
+  .map {
+    display: none;
+  }
 }
 
 
