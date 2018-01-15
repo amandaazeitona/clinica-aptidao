@@ -8,3 +8,9 @@
 
 
 admin = Admin.create email: 'admin@cjr.org.br', password: 'admincjr123'
+
+habilitacao = Price.create price: 100
+renovacao   = Price.create price: 200
+mudanca     = Price.create price: 300
+adicao      = Price.create price: 400
+instrutor   = Price.create price: 500
