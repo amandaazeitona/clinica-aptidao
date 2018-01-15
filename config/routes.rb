@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :sections
+  resources :prices
   devise_for :admins, path: 'auth'
   get 'creatives/index'
 
