@@ -32,12 +32,6 @@ body {
     font-size: 30px;
 }
 
-
-
-
-
-
-
 //******************* HEADER *************************************************//
 header {
     background-image: asset-data-url("indice5.jpg");
@@ -75,7 +69,7 @@ hr {
 
 .text-faded {
     font-size: 20px;
-} 
+}
 
 .container {
     width: 90%;
@@ -111,10 +105,20 @@ hr {
         margin-bottom: 0.5em;;
     }
 
-    
 }
 
 //******************* SERVIÇOS *************************************************//
+
+//******************* CONTATO ***********************************************//
+
+.map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//******************* RESPONSIVIDADE ****************************************//
+
 .service-box {
     margin-top: 4em;
     margin-bottom: 5em;
@@ -315,6 +319,12 @@ hr {
         margin-bottom: 1.5em;
     }
 
+}
+
+@media (max-width: 675px) {
+  .map {
+    display: none;
+  }
 }
 
 
