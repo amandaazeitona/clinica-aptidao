@@ -64,7 +64,7 @@ header .header-content .header-content-inner h1 {
 }
 
 hr {
-    margin-bottom: 5em;
+    margin-bottom: 3.5em;
 }
 
 .text-faded {
@@ -107,6 +107,8 @@ hr {
 
 }
 
+//******************* SERVIÇOS *************************************************//
+
 //******************* CONTATO ***********************************************//
 
 .map {
@@ -142,6 +144,44 @@ hr {
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
+
+.service-button {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
+.modal .modal-dialog {
+    
+    border-radius: 0px;
+    h3 {
+        color: $aptidao-azul;
+        font-weight: 600;
+    }
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.modal-header {
+    background-color: #fff;
+}
+
+.modal-body {
+    background-color: rgb(80, 80, 80);
+    color: #fff;
+    
+    >p {
+        text-align: justify;
+    }
+}
+
+.modal-footer {
+    background-color: #fff;
+}
+
+
 
 
 @media(min-width:993px){
@@ -187,9 +227,18 @@ hr {
         align-items: center;
     }
 
-    .panel {
-        margin: 3em 6em;
+    
+    .modal .modal-dialog {
+    
+        width: 50%;
     }
+    
+    .modal-content {
+        width: 100%;
+    }
+
+
+
 
 
 }
@@ -246,6 +295,7 @@ hr {
 @media(max-width:768px) {
     .navbar-default {
         //height: 4em;
+        border-color: rgb(182, 182, 182);
     }
 
     .navbar-default .navbar-header .navbar-brand {
