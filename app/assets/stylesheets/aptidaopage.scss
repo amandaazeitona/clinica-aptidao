@@ -169,11 +169,16 @@ hr {
 }
 
 .modal-body {
-    background-color: #2318be;
+    background-color: rgb(80, 80, 80);
+    color: #fff;
+    
+    >p {
+        text-align: justify;
+    }
 }
 
 .modal-footer {
-    background-color: gray;
+    background-color: #fff;
 }
 
 

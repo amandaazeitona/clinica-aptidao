@@ -41253,3 +41253,242 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 85ms (Views: 80.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-15 12:34:53 -0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (483.4ms)
+  Rendered welcome/_header.html.erb (0.3ms)
+  Rendered welcome/_bg_primary.html.erb (0.3ms)
+  Rendered welcome/_services.html.erb (3.0ms)
+  Rendered welcome/_call_to_action.html.erb (0.2ms)
+  Rendered welcome/_contact.html.erb (0.2ms)
+  Rendered welcome/index.html.erb within layouts/application (491.6ms)
+Completed 200 OK in 582ms (Views: 572.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 12:45:14 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (11.1ms)
+  Rendered welcome/_header.html.erb (1.8ms)
+  Rendered welcome/_bg_primary.html.erb (1.8ms)
+  Rendered welcome/_services.html.erb (28.9ms)
+  Rendered welcome/_call_to_action.html.erb (1.2ms)
+  Rendered welcome/_contact.html.erb (1.7ms)
+  Rendered welcome/index.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 144ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 12:45:27 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (25.7ms)
+  Rendered welcome/_header.html.erb (0.6ms)
+  Rendered welcome/_bg_primary.html.erb (1.1ms)
+  Rendered welcome/_services.html.erb (5.9ms)
+  Rendered welcome/_call_to_action.html.erb (0.6ms)
+  Rendered welcome/_contact.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 130ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 12:47:38 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (10.2ms)
+  Rendered welcome/_header.html.erb (1.5ms)
+  Rendered welcome/_bg_primary.html.erb (1.4ms)
+  Rendered welcome/_services.html.erb (22.0ms)
+  Rendered welcome/_call_to_action.html.erb (0.8ms)
+  Rendered welcome/_contact.html.erb (0.7ms)
+  Rendered welcome/index.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 151ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 12:50:56 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (9.5ms)
+  Rendered welcome/_header.html.erb (1.9ms)
+  Rendered welcome/_bg_primary.html.erb (2.4ms)
+  Rendered welcome/_services.html.erb (16.4ms)
+  Rendered welcome/_call_to_action.html.erb (1.2ms)
+  Rendered welcome/_contact.html.erb (0.8ms)
+  Rendered welcome/index.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 150ms (Views: 145.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 12:54:20 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (1.5ms)
+  Rendered welcome/_header.html.erb (0.3ms)
+  Rendered welcome/_bg_primary.html.erb (0.4ms)
+  Rendered welcome/_services.html.erb (4.7ms)
+  Rendered welcome/_call_to_action.html.erb (0.4ms)
+  Rendered welcome/_contact.html.erb (0.7ms)
+  Rendered welcome/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 12:56:01 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (5.6ms)
+  Rendered welcome/_header.html.erb (1.2ms)
+  Rendered welcome/_bg_primary.html.erb (0.6ms)
+  Rendered welcome/_services.html.erb (6.2ms)
+  Rendered welcome/_call_to_action.html.erb (0.5ms)
+  Rendered welcome/_contact.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (23.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867676477980 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867676477980 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2814ms (Views: 2811.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:12:52 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (2.0ms)
+  Rendered welcome/_header.html.erb (0.4ms)
+  Rendered welcome/_bg_primary.html.erb (0.4ms)
+  Rendered welcome/_services.html.erb (4.5ms)
+  Rendered welcome/_call_to_action.html.erb (1.6ms)
+  Rendered welcome/_contact.html.erb (0.9ms)
+  Rendered welcome/index.html.erb within layouts/application (18.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867594777120 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867594777120 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2118ms (Views: 2115.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:21:02 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (11.2ms)
+  Rendered welcome/_header.html.erb (1.7ms)
+  Rendered welcome/_bg_primary.html.erb (2.9ms)
+  Rendered welcome/_services.html.erb (29.7ms)
+  Rendered welcome/_call_to_action.html.erb (1.7ms)
+  Rendered welcome/_contact.html.erb (2.2ms)
+  Rendered welcome/index.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 156ms (Views: 150.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:22:43 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (3.2ms)
+  Rendered welcome/_header.html.erb (1.6ms)
+  Rendered welcome/_bg_primary.html.erb (0.7ms)
+  Rendered welcome/_services.html.erb (5.7ms)
+  Rendered welcome/_call_to_action.html.erb (0.5ms)
+  Rendered welcome/_contact.html.erb (0.5ms)
+  Rendered welcome/index.html.erb within layouts/application (20.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867593103640 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 401 Unauthorized in 871ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...justify-content": expected ";", was ": flex-start;"):
+     5: 
+     6: 
+     7:     <title>Clínica Aptidão</title>
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    10:     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    11:     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  
+app/assets/stylesheets/aptidaopage.scss:174
+app/assets/stylesheets/application.scss:5
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3322088903928384992_69867593103640'
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:22:57 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (5.8ms)
+  Rendered welcome/_header.html.erb (0.6ms)
+  Rendered welcome/_bg_primary.html.erb (0.7ms)
+  Rendered welcome/_services.html.erb (17.0ms)
+  Rendered welcome/_call_to_action.html.erb (1.0ms)
+  Rendered welcome/_contact.html.erb (1.3ms)
+  Rendered welcome/index.html.erb within layouts/application (39.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867685493300 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867685493300 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2793ms (Views: 2783.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:23:40 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (1.5ms)
+  Rendered welcome/_header.html.erb (0.3ms)
+  Rendered welcome/_bg_primary.html.erb (0.3ms)
+  Rendered welcome/_services.html.erb (14.8ms)
+  Rendered welcome/_call_to_action.html.erb (0.3ms)
+  Rendered welcome/_contact.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (23.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867698483560 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867698483560 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2814ms (Views: 2741.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:24:44 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (7.1ms)
+  Rendered welcome/_header.html.erb (0.4ms)
+  Rendered welcome/_bg_primary.html.erb (0.5ms)
+  Rendered welcome/_services.html.erb (10.7ms)
+  Rendered welcome/_call_to_action.html.erb (0.6ms)
+  Rendered welcome/_contact.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (28.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867594486400 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867594486400 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2713ms (Views: 2707.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:28:35 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (10.3ms)
+  Rendered welcome/_header.html.erb (1.6ms)
+  Rendered welcome/_bg_primary.html.erb (2.9ms)
+  Rendered welcome/_services.html.erb (28.9ms)
+  Rendered welcome/_call_to_action.html.erb (1.5ms)
+  Rendered welcome/_contact.html.erb (1.0ms)
+  Rendered welcome/index.html.erb within layouts/application (71.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867698836440 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867698836440 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2533ms (Views: 2528.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:29:44 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (8.5ms)
+  Rendered welcome/_header.html.erb (2.1ms)
+  Rendered welcome/_bg_primary.html.erb (1.2ms)
+  Rendered welcome/_services.html.erb (12.0ms)
+  Rendered welcome/_call_to_action.html.erb (0.8ms)
+  Rendered welcome/_contact.html.erb (0.7ms)
+  Rendered welcome/index.html.erb within layouts/application (44.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867592192020 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867592192020 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2545ms (Views: 2540.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-15 13:30:14 -0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (10.8ms)
+  Rendered welcome/_header.html.erb (2.2ms)
+  Rendered welcome/_bg_primary.html.erb (2.2ms)
+  Rendered welcome/_services.html.erb (12.8ms)
+  Rendered welcome/_call_to_action.html.erb (0.5ms)
+  Rendered welcome/_contact.html.erb (1.4ms)
+  Rendered welcome/index.html.erb within layouts/application (47.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867601903060 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.css.scss to /home/fillype/Documents/cjr/clinica-aptidao/app/assets/stylesheets/creative/creative.scss. (called from _app_views_layouts_application_html_erb___3322088903928384992_69867601903060 at /home/fillype/Documents/cjr/clinica-aptidao/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 2439ms (Views: 2433.9ms | ActiveRecord: 0.0ms)
+
+
