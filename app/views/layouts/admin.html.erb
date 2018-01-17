@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Clínica Aptidão</title>
+    <%= stylesheet_link_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %>
+    
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="/">Aptidao</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/prices">Precos</a></li>
+            <li><%= link_to 'Adicionar Admin', new_admin_registration_path %></</li>
+            <li><a href="#">Ver admin</a></li> 
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><%= link_to 'Logout', destroy_admin_session_path, method: :delete %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</html>

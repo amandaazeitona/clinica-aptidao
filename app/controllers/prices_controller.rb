@@ -1,6 +1,7 @@
 class PricesController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_price, only: [:show, :edit, :update, :destroy]
+  layout 'admin'
 
   # GET /prices
   # GET /prices.json
