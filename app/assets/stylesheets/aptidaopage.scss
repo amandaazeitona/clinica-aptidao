@@ -360,3 +360,18 @@ hr {
     border-width: 15px;
     background-color:$aptidao-azul-dark ;
 }
+
+
+.footer-page {
+    background-color: #2a2a2a;
+    text-align: center;
+    padding: 2em 0;
+
+    .white {
+        color: #fff;
+    }
+
+    .gray {
+        color: #8f8f8f;
+    }
+}

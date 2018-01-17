@@ -2,13 +2,13 @@
 
 <h1>Preços</h1>
 
-<table>
+<table class="table">
     <tr>
-      <th width="180">1a Habiltação</th>
+      <th width="180">Primeira Habilitação</th>
       <th width="180">Renovação da CNH</th>
       <th width="180">Mudança de Categoria</th>
       <th width="180">Adição de Categoria</th>
-      <th width="180">Instrutor/Diretor/Examinador</th>
+      <th width="180">Instrutor /Diretor /Examinador</th>
     </tr>
 
     <tr>
@@ -20,5 +20,4 @@
 
 <br>
 
-<%= link_to 'Editar Preços', edit_all_path %> |
-<%= link_to 'Sair', destroy_admin_session_path, method: :delete %>
+<%= link_to 'Editar Preços', edit_all_path, class: "btn btn-success" %>
