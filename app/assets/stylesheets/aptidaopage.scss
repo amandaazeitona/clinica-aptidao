@@ -1,0 +1,377 @@
+@import 'base/reusables';
+$aptidao-azul: rgba(31, 17, 158, 0.781);
+$aptidao-azul-dark: #2318be;
+
+body {
+    font-family: 'Roboto Slab', Merriweather,'Helvetica Neue',Arial,sans-serif;
+}
+//******************* NAVBAR *************************************************//
+.navbar-default {
+    border-color: transparent;
+}
+
+.logo-aptidao {
+    height: 50px;
+    @include v-align;
+}
+
+.navbar-default.affix .navbar-header .navbar-brand {
+    font-size: 23px;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.navbar-header {
+    height: 100%;
+}
+
+
+.navbar-default .navbar-header .navbar-brand {
+    font-size: 30px;
+}
+
+//******************* HEADER *************************************************//
+header {
+    background-image: asset-data-url("indice5.jpg");
+}
+
+hr {
+    border-color: $aptidao-azul;
+}
+
+header .header-content .header-content-inner h1 {
+    font-size: 65px;
+}
+
+.badge {
+    padding: 15px;
+    font-size: 60px;
+}
+
+
+ header .header-content .header-content-inner p {
+     font-size: 21px;
+     font-weight: 400;
+     color: rgb(255, 255, 255);
+ }
+
+//******************* SOBRE *************************************************//
+
+.section-heading {
+    font-weight: 800;
+}
+
+hr {
+    margin-bottom: 3.5em;
+}
+
+.text-faded {
+    font-size: 20px;
+}
+
+.container {
+    width: 90%;
+}
+
+
+.first-row {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-row {
+    margin-top: 5em;
+}
+
+.mvv {
+    width: 33.3%;
+    text-align: center;
+    float: left;
+    padding: 10px;
+
+    >.mvv-title {
+        font-size: xx-large;
+        font-weight: 700;
+        color: rgb(167, 167, 167);
+        margin-bottom: 0.5em;
+    }
+    >p{
+        font-size: 20px;
+        font-style: italic;
+        margin-bottom: 0.5em;;
+    }
+
+}
+
+//******************* SERVIÇOS *************************************************//
+
+//******************* CONTATO ***********************************************//
+
+.map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//******************* RESPONSIVIDADE ****************************************//
+
+.service-box {
+    margin-top: 4em;
+    margin-bottom: 5em;
+
+    >h3 {
+        color: $aptidao-azul;
+        font-weight: 600;
+    }
+}
+
+.service-modal-button {
+    background-color: #fff;
+    border: none;
+}
+
+
+.service-image {
+    height: 120px;
+}
+
+.add-image {
+    height: 100px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.service-button {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
+.modal .modal-dialog {
+    
+    border-radius: 0px;
+    h3 {
+        color: $aptidao-azul;
+        font-weight: 600;
+    }
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.modal-header {
+    background-color: #fff;
+}
+
+
+.modal-body {
+    background-color: rgba(80, 80, 80, 0.884);
+    color: #fff;
+   
+    >p {
+        text-align: justify;
+    }
+}
+
+.modal-footer {
+    background-color: #fff;
+}
+
+
+
+@media(min-width:993px){
+    .container-fluid {
+        width: 90%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 27px;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+       // color: $aptidao-azul;
+       @include v-align;
+    }
+
+    .collapse.navbar-collapse {
+        height: 100% !important;
+    }
+
+    .collapse.navbar-collapse.in {
+        height: 100% !important;
+        background-color: #fff;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        font-size: 16px;
+    }
+
+    .fa.fa-facebook-square {
+        font-size: 30px;
+    }
+
+    ul.nav.navbar-nav.navbar-right {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .modal .modal-dialog {
+    
+        width: 50%;
+    }
+    
+    .modal-content {
+        width: 100%;
+    }
+
+
+
+
+
+}
+
+@media(min-width:769px)and(max-width:992px) {
+
+    .navbar-default .navbar-header .navbar-brand {
+        // color: $aptidao-azul;
+        font-size: 25px;
+    }
+
+    .collapse.navbar-collapse {
+        height: 100%;
+    }
+
+    // ul.nav.navbar-nav.navbar-right {
+    //     height: 100%;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        font-size: 15px;
+    }
+
+    .fa.fa-facebook-square {
+        font-size: 23px;
+    }
+
+    header .header-content .header-content-inner h1 {
+        font-size: 35px;
+    }
+
+    header .header-content .header-content-inner p {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+
+    .badge {
+        padding: 10px;
+        font-size: 40px;
+        background-color: $aptidao-azul;
+    }
+
+    .mvv {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    .inner-container {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px) {
+    .navbar-default {
+        //height: 4em;
+        border-color: rgb(182, 182, 182);
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        font-size: 24px;
+        color: $aptidao-azul;
+    }
+
+    header .header-content .header-content-inner h1 {
+        font-size: 30px;
+    }
+
+    header .header-content .header-content-inner p {
+        font-size: 17px;
+        color: rgb(255, 255, 255);
+    }
+
+    .badge {
+        padding: 10px;
+        font-size: 30px;
+        background-color: $aptidao-azul;
+    }
+
+
+    .mvv {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    .inner-container {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 675px) {
+  .map {
+    display: none;
+  }
+}
+
+
+
+
+
+.btn-primary {
+    border-color: #fff;
+    color: #fff;
+    background-color: $aptidao-azul;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #fff;
+    border-width: 15px;
+    background-color:$aptidao-azul-dark ;
+}
+
+
+.footer-page {
+    background-color: #2a2a2a;
+    text-align: center;
+    padding: 2em 0;
+
+    .white {
+        color: #fff;
+    }
+
+    .gray {
+        color: #8f8f8f;
+    }
+}
