@@ -1,0 +1,24 @@
+<%= form_for :price, :url => update_all_path, :html => { :method => :put } do |f| %>
+
+  <table>
+    <tr>
+      <th>1a Habiltação</th>
+      <th>Renovação da CNH</th>
+      <th>Mudança de Categoria</th>
+      <th>Adição de Categoria</th>
+      <th>Instrutor/Diretor/Examinador</th>
+    </tr>
+    <tr>
+      <% @prices.each do |price| %>
+        <%= fields_for "price[]", price do |price_fields| %>
+          <td> <%= price_fields.text_field :price %> </td>
+        <% end %>
+      <% end %>
+    </tr>
+  </table>
+
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+
+<% end %>

@@ -9,15 +9,8 @@
 
 admin = Admin.create email: 'admin@cjr.org.br', password: 'admincjr123'
 
-section = Section.create name: 'header'
-          Section.create name: 'about'
-          Section.create name: 'services'
-          Section.create name: 'portfolio'
-          Section.create name: 'contact'
-
-header = Section.find_by(name: 'header')
-header.contents.create text: 'Clínica Aptidão'
-header.contents.create text: 'Sobre'
-header.contents.create text: 'Serviços'
-header.contents.create text: 'Portfólio'
-header.contents.create text: 'Contato'
+habilitacao = Price.create price: 100
+renovacao   = Price.create price: 200
+mudanca     = Price.create price: 300
+adicao      = Price.create price: 400
+instrutor   = Price.create price: 500
