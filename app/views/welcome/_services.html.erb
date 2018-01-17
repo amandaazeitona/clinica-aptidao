@@ -58,7 +58,7 @@
                                 <p>Realizar o curso e as provas teórica e prática no DETRAN. Com todos os exames OK é só aguardar a sua carteira de motorista em casa.</p>
                                 <br>
                                 <br>
-                                <p>VALOR: R$ 100,00</p>
+                                <p>VALOR: R$ <%= @prices[0].price %></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -111,7 +111,7 @@
                                 <p>Preenchidos todos os requisitos, aguarde sua CNH no seu endereço. O prazo para entrega é de 10 a 15 dias corridos.</p>
                                 <br>
                                 <br>
-                                <p>VALOR: R$ 100,00</p>
+                                <p>VALOR: R$ <%= @prices[1].price %></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -165,17 +165,17 @@
 
                                 <p><i class="fa fa-truck fa-2x" aria-hidden="true"></i>        CATEGORIA "C"</p>
                                 <p><i class="fa fa-caret-right" aria-hidden="true"></i> Estar habilitado há, no mínimo, 1 (um) ano na categoria "B";</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente sem infração de natureza média, nos últimos 12 meses.</p>
+                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente em infração de natureza média, nos últimos 12 meses.</p>
                                 <br>
                                 <p><i class="fa fa-bus fa-2x" aria-hidden="true"></i>        CATEGORIA "D"</p>
                                 <p><i class="fa fa-caret-right" aria-hidden="true"></i> Estar habilitado há, no mínimo, 2 (dois) anos na categoria "B" ou no mínimo há um ano na caterogia "C";</p>
                                 <p><i class="fa fa-caret-right" aria-hidden="true"></i> ter no mínimo 21 anos de idade;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente sem infração de natureza média, nos últimos 12 meses.</p>
+                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente em infração de natureza média, nos últimos 12 meses.</p>
                                 <br>
                                 <p><i class="fa fa-car fa-2x" aria-hidden="true"></i>        CATEGORIA "E"</p>
                                 <p><i class="fa fa-caret-right" aria-hidden="true"></i> Estar habilitado há, no mínimo, 1 (um) ano na categoria "D";</p>
                                 <p><i class="fa fa-caret-right" aria-hidden="true"></i> ter no mínimo 21 anos de idade;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente sem infração de natureza média, nos últimos 12 meses.</p>
+                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente em infração de natureza média, nos últimos 12 meses.</p>
                                 <br>
                                 <br>
                                 <p>OBSERVAÇÃO: A categoria "A" poderá ser incluída em qualquer categoria. Caso o condutor seja habilitado somente na caterogia "A", poderá incluir primeiramente a categoria "B" e gradualmente as demais categorias.</p>
@@ -195,7 +195,7 @@
                                 <p>Em seguida, encaminhe o processo ao Centro de Formação de Condutores (CFC) de sua preferência.</p>
                                 <p>Após a aprovação na prova prática basta aguardar a nova habilitação em casa.</p>
                                 <br><br>
-                                <p>VALOR: R$ 100,00</p>
+                                <p>VALOR: R$ <%= @prices[2].price %></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -240,7 +240,7 @@
                                 <p>Em seguida, encaminhe o processo ao Centro de Formação de Condutores (CFC) de sua preferência para realização das 15 horas em aulas práticas e a prova obrigatória para a adição da categoria desejada.</p>
                                 <p>Após a aprovação na prova prática basta aguardar a CNH em casa.</p>
                                 <br><br>
-                                <p>VALOR: R$ 100,00</p>
+                                <p>VALOR: R$ <%= @prices[3].price %></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -275,7 +275,7 @@
                                 <br>
                                 <p>Entre em contato para marcarmos um horário.</p>
                                 <br><br>
-                                <p>VALOR: R$ 100,00</p>
+                                <p>VALOR: R$ <%= @prices[4].price %></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

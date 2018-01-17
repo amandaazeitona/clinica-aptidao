@@ -168,10 +168,11 @@ hr {
     background-color: #fff;
 }
 
+
 .modal-body {
-    background-color: rgb(80, 80, 80);
+    background-color: rgba(80, 80, 80, 0.884);
     color: #fff;
-    
+   
     >p {
         text-align: justify;
     }
@@ -180,7 +181,6 @@ hr {
 .modal-footer {
     background-color: #fff;
 }
-
 
 
 
@@ -290,6 +290,10 @@ hr {
         margin-bottom: 1.5em;
     }
 
+    .inner-container {
+        width: 100%;
+    }
+
 }
 
 @media(max-width:768px) {
@@ -322,6 +326,10 @@ hr {
     .mvv {
         width: 100%;
         margin-bottom: 1.5em;
+    }
+
+    .inner-container {
+        width: 100%;
     }
 
 }

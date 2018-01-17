@@ -64,6 +64,7 @@ class PricesController < ApplicationController
     redirect_to(prices_url)
   end
 
+
   # DELETE /prices/1
   # DELETE /prices/1.json
   def destroy
