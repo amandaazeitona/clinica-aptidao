@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
 
-  # match 'prices/all/edit' => 'prices#edit_all', :as => :edit_all, :via => :get
-  get 'prices/all/edit', to: 'prices#edit_all', as: 'edit_all'
-  put 'prices/all', to: 'prices#update_all', as: 'update_all'
-  get 'prices', to: 'prices#index'
+  # match 'services/all/edit' => 'services#edit_all', :as => :edit_all, :via => :get
+  # get 'services/all/edit', to: 'services#edit_all', as: 'edit_all'
+  # put 'services/all', to: 'services#update_all', as: 'update_all'
+  # get 'services', to: 'services#index'
 
-  devise_for :admins, :controllers => {:registrations => "admins/registrations"}
+  resources :services
+
   get 'creatives/index'
 
+  devise_for :admins, :controllers => {:registrations => "admins/registrations"}
   authenticated :admin do
-    root 'prices#index', as: :authenticated_root
+    root 'services#index', as: :authenticated_root
   end
 
 

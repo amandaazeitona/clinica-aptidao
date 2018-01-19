@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @prices = Price.all
+    @prices = Service.all
   end
 end

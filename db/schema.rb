@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180115141819) do
+ActiveRecord::Schema.define(version: 20180118202903) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,14 +29,13 @@ ActiveRecord::Schema.define(version: 20180115141819) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "prices", force: :cascade do |t|
-    t.integer "price"
+  create_table "services", force: :cascade do |t|
+    t.integer "macro_service_id"
+    t.string "name", null: false
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "prices_tables", force: :cascade do |t|
-    t.integer "price"
+    t.index ["macro_service_id"], name: "index_services_on_macro_service_id"
   end
 
 end
