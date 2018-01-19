@@ -145,7 +145,7 @@ hr {
 //******************* RESPONSIVIDADE ****************************************//
 
 .services-section {
-    background-color: rgb(234, 238, 248);
+    background-color: #F0F8FF;
 }
 
 .service-box {
@@ -199,11 +199,15 @@ hr {
 
 
 .modal-body {
-    background-color: rgba(80, 80, 80, 0.884);
+    background-color: #B0C4DE;
     color: #fff;
    
     >p {
         text-align: justify;
+    }
+
+    td {
+        text-align: left;
     }
 }
 
