@@ -1,13 +1,15 @@
 @import 'base/reusables';
-$aptidao-azul: rgba(31, 17, 158, 0.781);
-$aptidao-azul-dark: #2318be;
+$aptidao-azul: #0B2161;
+$aptidao-azul-navbar: rgba(11, 32, 97, 0.3);
+$aptidao-azul-light: #2118a1;
 
 body {
-    font-family: 'Roboto Slab', Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Lato', Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
 //******************* NAVBAR *************************************************//
 .navbar-default {
     border-color: transparent;
+    background-color: $aptidao-azul-navbar;
 }
 
 .logo-aptidao {
@@ -32,32 +34,55 @@ body {
     font-size: 30px;
 }
 
+.navbar-default.affix {
+    background-color: $aptidao-azul-navbar;
+}
+
+
+.collapse.navbar-collapse.in {
+    background-color: rgba(129, 139, 168, 0.8);
+}
+
 //******************* HEADER *************************************************//
 header {
-    background-image: asset-data-url("indice5.jpg");
+    background-image: asset-data-url("header.jpg");
+    color: $aptidao-azul;
 }
 
 hr {
-    border-color: $aptidao-azul;
+    border-color: $aptidao-azul-light;
 }
 
 header .header-content .header-content-inner h1 {
     font-size: 65px;
+    font-family: 'Lato';
 }
 
-.badge {
-    padding: 15px;
-    font-size: 60px;
+header .header-content .header-content-inner p {
+     font-size: 18px;
+     font-weight: 500;
+     color: $aptidao-azul;
 }
 
-
- header .header-content .header-content-inner p {
-     font-size: 21px;
-     font-weight: 400;
-     color: rgb(255, 255, 255);
- }
+h4.phones {
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    background-color: #c9c9c9;
+    color: $aptidao-azul;
+    padding: 10px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: $aptidao-azul;
+    border-width: 3px;
+}
 
 //******************* SOBRE *************************************************//
+
+.bg-primary {
+    background-color: $aptidao-azul;
+}
 
 .section-heading {
     font-weight: 800;
@@ -119,9 +144,13 @@ hr {
 
 //******************* RESPONSIVIDADE ****************************************//
 
+.services-section {
+    background-color: rgb(234, 238, 248);
+}
+
 .service-box {
-    margin-top: 4em;
-    margin-bottom: 5em;
+    margin-top: 2em;
+    margin-bottom: 3sem;
 
     >h3 {
         color: $aptidao-azul;
@@ -243,7 +272,7 @@ hr {
 
 }
 
-@media(min-width:769px)and(max-width:992px) {
+@media(min-width:600px)and(max-width:992px) {
 
     .navbar-default .navbar-header .navbar-brand {
         // color: $aptidao-azul;
@@ -270,13 +299,16 @@ hr {
         font-size: 23px;
     }
 
+    .fa.fa-instagram {
+        font-size: 23px;
+    }
+
     header .header-content .header-content-inner h1 {
         font-size: 35px;
     }
 
     header .header-content .header-content-inner p {
         font-size: 20px;
-        color: rgb(255, 255, 255);
     }
 
     .badge {
@@ -296,11 +328,13 @@ hr {
 
 }
 
-@media(max-width:768px) {
+@media(max-width:599px) {
     .navbar-default {
         //height: 4em;
         border-color: rgb(182, 182, 182);
+        background-color: rgba(129, 139, 168, 0.5);
     }
+
 
     .navbar-default .navbar-header .navbar-brand {
         font-size: 24px;
@@ -308,19 +342,20 @@ hr {
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 30px;
+        font-size: 25px !important;
     }
 
     header .header-content .header-content-inner p {
         font-size: 17px;
-        color: rgb(255, 255, 255);
     }
 
-    .badge {
+    h4.phones {
+        font-size: 23px;
+        font-weight: 600;
+        margin-bottom: 0.3em;
         padding: 10px;
-        font-size: 30px;
-        background-color: $aptidao-azul;
     }
+
 
 
     .mvv {
@@ -358,7 +393,7 @@ hr {
 .open > .dropdown-toggle.btn-primary {
     border-color: #fff;
     border-width: 15px;
-    background-color:$aptidao-azul-dark ;
+    background-color:$aptidao-azul-light ;
 }
 
 
