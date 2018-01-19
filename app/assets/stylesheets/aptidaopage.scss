@@ -150,7 +150,7 @@ hr {
 
 .service-box {
     margin-top: 2em;
-    margin-bottom: 3sem;
+    margin-bottom: 4em;
 
     >h3 {
         color: $aptidao-azul;
@@ -204,6 +204,10 @@ hr {
    
     >p {
         text-align: justify;
+    }
+
+    li {
+        text-align: left;
     }
 
     td {
