@@ -1,15 +1,13 @@
 @import 'base/reusables';
-$aptidao-azul: #0B2161;
-$aptidao-azul-navbar: rgba(11, 32, 97, 0.3);
-$aptidao-azul-light: #2118a1;
+$aptidao-azul: #002554;
+$aptidao-azul-light: #b7b4e0;
 
 body {
     font-family: 'Lato', Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
 //******************* NAVBAR *************************************************//
 .navbar-default {
-    border-color: transparent;
-    background-color: $aptidao-azul-navbar;
+    background-color: $aptidao-azul;
 }
 
 .logo-aptidao {
@@ -35,12 +33,39 @@ body {
 }
 
 .navbar-default.affix {
-    background-color: $aptidao-azul-navbar;
+    background-color: $aptidao-azul;
 }
 
+.navbar-default.affix .navbar-header .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a:focus {
+    color: #fff;
+    
+}
+
+.navbar-default.affix .nav > li>a {
+    color: $aptidao-azul-light;
+}
+
+.navbar-default.affix .nav>li>a:focus {
+    color: #fff;
+}
+
+.navbar-default.affix .nav > li>a:hover,
+.navbar-default.affix .nav>li>a:focus:hover {
+    color: #fff;
+}
+
+.navbar-default.affix .navbar-header .navbar-brand:hover,
+.navbar-default.affix .navbar-header .navbar-brand:focus {
+    color: #fff;
+}
 
 .collapse.navbar-collapse.in {
-    background-color: rgba(129, 139, 168, 0.8);
+    //background-color: rgba(129, 139, 168, 0.8);
 }
 
 //******************* HEADER *************************************************//
@@ -144,9 +169,6 @@ hr {
 
 //******************* RESPONSIVIDADE ****************************************//
 
-.services-section {
-    background-color: #F0F8FF;
-}
 
 .service-box {
     margin-top: 2em;
@@ -267,7 +289,7 @@ hr {
     
     .modal .modal-dialog {
     
-        width: 50%;
+        width: 70%;
     }
     
     .modal-content {
@@ -319,12 +341,6 @@ hr {
         font-size: 20px;
     }
 
-    .badge {
-        padding: 10px;
-        font-size: 40px;
-        background-color: $aptidao-azul;
-    }
-
     .mvv {
         width: 100%;
         margin-bottom: 1.5em;
@@ -340,13 +356,30 @@ hr {
     .navbar-default {
         //height: 4em;
         border-color: rgb(182, 182, 182);
-        background-color: rgba(129, 139, 168, 0.5);
+        //background-color: rgba(129, 139, 168, 0.5);
     }
 
+    .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
 
     .navbar-default .navbar-header .navbar-brand {
-        font-size: 24px;
-        color: $aptidao-azul;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .navbar-default .nav > li > a, 
+    .navbar-default .nav > li > a:focus {
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-default.affix .nav > li>a {
+        color: #fff;
     }
 
     header .header-content .header-content-inner h1 {
