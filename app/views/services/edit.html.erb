@@ -5,7 +5,7 @@
       <th> Nome </th>
       <th> Preço </th>
     </tr>
-    <% @micro_services.each do |service| %>
+    <% @micro_services[1..-1].each do |service| %>
       <%= form.fields_for :micro_services, service do |f| %>
         <tr>
           <td>
