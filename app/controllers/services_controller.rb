@@ -21,7 +21,6 @@ class ServicesController < ApplicationController
 
   # GET /services/1/edit
   def edit
-    @micro_services = Service.where(macro_service_id: @service.id)
   end
 
   # POST /services
@@ -31,7 +30,7 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: 'service was successfully created.' }
+        format.html { redirect_to @service.macro_service, notice: 'service was successfully created.' }
         format.json { render :show, status: :created, location: @service }
       else
         format.html { render :new }

@@ -4,8 +4,11 @@
   <% @service.micro_services[1..-1].each do |service| %>
     <tr>
       <td> <%= service.name %> </td>
+      <td> <%= service.price %> </td>
       <!-- <td> <%= link_to 'Editar Preço', edit_service_path(service), class: "btn btn-success" %> </td> -->
       <td> <%= link_to 'Deletar Serviço', service_path(service), method: :delete, class: "btn btn-success" %> </td>
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'Adicionar Serviço Atrelado', new_service_path(@service), class: "btn btn-success" %>
