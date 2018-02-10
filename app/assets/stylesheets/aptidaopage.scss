@@ -43,11 +43,11 @@ body {
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
     color: #fff;
-    
+
 }
 
 .navbar-default.affix .nav > li>a {
-    color: $aptidao-azul-light;
+  color: #fff;
 }
 
 .navbar-default.affix .nav>li>a:focus {
@@ -56,12 +56,12 @@ body {
 
 .navbar-default.affix .nav > li>a:hover,
 .navbar-default.affix .nav>li>a:focus:hover {
-    color: #fff;
+  color: $aptidao-azul-light;
 }
 
 .navbar-default.affix .navbar-header .navbar-brand:hover,
 .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #fff;
+  color: rgba(255,255,255,.7);
 }
 
 .collapse.navbar-collapse.in {
@@ -104,6 +104,11 @@ h4.phones {
 }
 
 //******************* SOBRE *************************************************//
+
+.fa.fa-sm {
+  font-size: 0.3em;
+  vertical-align: middle;
+}
 
 .bg-primary {
     background-color: $aptidao-azul;
@@ -151,7 +156,6 @@ hr {
     }
     >p{
         font-size: 20px;
-        font-style: italic;
         margin-bottom: 0.5em;;
     }
 
@@ -203,7 +207,7 @@ hr {
 }
 
 .modal .modal-dialog {
-    
+
     border-radius: 0px;
     h3 {
         color: $aptidao-azul;
@@ -221,9 +225,9 @@ hr {
 
 
 .modal-body {
-    background-color: #B0C4DE;
-    color: #fff;
-   
+    background-color: #b2b2b2; // #9eacc1
+    color: $aptidao-azul;
+
     >p {
         text-align: justify;
     }
@@ -286,12 +290,12 @@ hr {
         align-items: center;
     }
 
-    
+
     .modal .modal-dialog {
-    
+
         width: 70%;
     }
-    
+
     .modal-content {
         width: 100%;
     }
@@ -368,7 +372,7 @@ hr {
         color: #fff;
     }
 
-    .navbar-default .nav > li > a, 
+    .navbar-default .nav > li > a,
     .navbar-default .nav > li > a:focus {
         font-size: 15px;
         color: #fff;
