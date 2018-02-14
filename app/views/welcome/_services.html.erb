@@ -39,25 +39,57 @@
                                     <li>possuir CPF.</li>
                                 </ol>
                                 <br>
-                                <p>Após a verificação desses requisitos siga os passos abaixo.</p>
+                                <p>Após a verificação desses requisitos siga os passos abaixo:</p>
                                 <br>
-                                <p>1º PASSO:</p>
-                                <p>Não vá diretamente a uma auto-escola! Entre em contato com uma clínica credenciada.</p>
-                                <br>
-                                <p>2º PASSO:</p>
-                                <p>Marque um horário para atendimento e encaminhe-se à Clínica Aptidão com os seguintes documentos:</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe);</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> CPF;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> uma foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos);</p>
-                                <br>
-                                <p>3º PASSO:</p>
-                                <p>Após a abertura do processo, realize os exames médicos (clínico e oftamológico) e psicológico. Esses exames têm em média de 1 hora a 2 horas de duração.</p>
-                                <br>
-                                <p>4º PASSO:</p>
-                                <p>Depois de realizar os exames, vocẽ receberá um boleto que deverá ser pago no Banco do Brasil ou no BRB no prazo máximo de 48 horas. Efetuado o pagamento retorne à clínica, após 24 horas da realização dos testes, com o comprovante de pagamento em mãos para receber o processo e os resultados dos exaxmes. Em seguida, encaminhe o processo ao Centro de Formação de Condutores (CFC) de sua preferência.</p>
-                                <br>
-                                <p>5º PASSO:</p>
-                                <p>Realizar o curso e as provas teórica e prática no DETRAN. Com todos os exames OK é só aguardar a sua carteira de motorista em casa.</p>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4>1º PASSO</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        Não vá diretamente a uma auto-escola! Entre em contato com uma clínica credenciada.     
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4>2º PASSO</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        Marque um horário para atendimento e encaminhe-se à Clínica Aptidão com os seguintes documentos:
+                                        <br><br><i class="fa fa-hand-o-right" aria-hidden="true"></i> Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe);     
+                                        <br><i class="fa fa-hand-o-right" aria-hidden="true"></i> CPF;
+                                        <br><i class="fa fa-hand-o-right" aria-hidden="true"></i> uma foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos).
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4>3º PASSO</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        Após a abertura do processo, realize os exames médicos (clínico e oftamológico) e psicológico. Esses exames têm em média de 1 hora a 2 horas de duração.
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4>4º PASSO</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        Depois de realizar os exames, vocẽ receberá um boleto que deverá ser pago no Banco do Brasil ou no BRB no prazo máximo de 48 horas. Efetuado o pagamento retorne à clínica, após 24 horas da realização dos testes, com o comprovante de pagamento em mãos para receber o processo e os resultados dos exaxmes. Em seguida, encaminhe o processo ao Centro de Formação de Condutores (CFC) de sua preferência.
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4>5º PASSO</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        Realizar o curso e as provas teórica e prática no DETRAN. Com todos os exames OK é só aguardar a sua carteira de motorista em casa.
+                                    </div>
+                                </div>
+
                                 <br>
                                 <br>
                                 <table class="table table-condensed">
@@ -70,25 +102,25 @@
                                     <tbody>
                                         <tr>
                                             <td>Exame Clínico e Oftalmológico</td>
-                                            <td>115,00</td>
+                                            <td><%= @prices[5].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Avaliação Psicológica (Psicotécnico)</td>
-                                            <td>175,00</td>
+                                            <td><%= @prices[6].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Custo Operacional</td>
-                                            <td>58,00</td>
+                                            <td><%= @prices[7].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Taxa DETRAN-DF</td>
-                                            <td>270,00</td>
+                                            <td><%= @prices[8].price %></td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>TOTAL</th>
-                                            <th>618,00</th>
+                                            <th><%= @prices[11].price %></th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -104,25 +136,25 @@
                                     <tbody>
                                         <tr>
                                             <td>Exame Clínico e Oftalmológico</td>
-                                            <td>115,00</td>
+                                            <td><%= @prices[5].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Avaliação Psicológica (Psicotécnico)</td>
-                                            <td>175,00</td>
+                                            <td><%= @prices[6].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Custo Operacional</td>
-                                            <td>58,00</td>
+                                            <td><%= @prices[7].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Taxa DETRAN-DF</td>
-                                            <td>270,00</td>
+                                            <td><%= @prices[9].price %></td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>TOTAL</th>
-                                            <th>618,00</th>
+                                            <th><%= @prices[12].price %></th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -137,25 +169,25 @@
                                     <tbody>
                                         <tr>
                                             <td>Exame Clínico e Oftalmológico</td>
-                                            <td>115,00</td>
+                                            <td><%= @prices[5].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Avaliação Psicológica (Psicotécnico)</td>
-                                            <td>175,00</td>
+                                            <td><%= @prices[6].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Custo Operacional</td>
-                                            <td>58,00</td>
+                                            <td><%= @prices[7].price %></td>
                                         </tr>
                                         <tr>
                                             <td>Taxa DETRAN-DF</td>
-                                            <td>325,00</td>
+                                            <td><%= @prices[10].price %></td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>TOTAL</th>
-                                            <th>673,00</th>
+                                            <th><%= @prices[13].price %></th>
                                         </tr>
                                     </tfoot>
                                 </table>

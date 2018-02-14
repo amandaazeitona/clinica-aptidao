@@ -216,15 +216,16 @@ hr {
 }
 
 .modal-header {
-    background-color: #fff;
+    background-color: rgb(192, 193, 211);
 }
 
 
 .modal-body {
-    background-color: #B0C4DE;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
    
     >p {
+        font-size: 18px;
         text-align: justify;
     }
 
@@ -234,6 +235,18 @@ hr {
 
     td {
         text-align: left;
+    }
+
+    table {
+        font-size: 18px;
+    }
+
+    .panel {
+        border-radius: 0px;
+    }
+
+    .panel-body {
+        font-size: 17px;
     }
 }
 
