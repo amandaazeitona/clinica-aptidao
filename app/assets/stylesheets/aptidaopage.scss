@@ -70,7 +70,7 @@ body {
 
 //******************* HEADER *************************************************//
 header {
-    background-image: asset-data-url("header.jpg");
+    background-image: asset-data-url("header1.jpg");
     color: $aptidao-azul;
 }
 
@@ -223,7 +223,7 @@ hr {
     background-color: #d8d8d8;
     
     >h3 {
-        font-weight: 1000;
+        font-weight: bolder !important;
     }
 }
 
@@ -233,8 +233,8 @@ hr {
     color: $aptidao-azul;
 
     >p {
-        font-size: 18px;
-        text-align: justify;
+        font-size: 20px;
+        text-align: center;
     }
 
     li {
@@ -248,6 +248,26 @@ hr {
     table {
         font-size: 18px;
     }
+    
+    h3 {
+        border-style: solid;
+        border-color: $aptidao-azul;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+
+    .internal {
+        margin-left: auto;
+        margin-right: auto;
+
+        th {
+            text-align: center;
+        }
+    }
+
+
 
     .panel {
         border-radius: 0px;
@@ -319,7 +339,9 @@ hr {
         width: 100%;
     }
 
-
+    .internal {
+        width: 60%;
+    }
 
 
 
