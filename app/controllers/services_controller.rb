@@ -6,7 +6,7 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.where(id: (1..5))
+    @services = Service.where(id: (1..9))
   end
 
   # GET /services/1

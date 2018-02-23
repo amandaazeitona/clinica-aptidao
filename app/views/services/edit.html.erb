@@ -10,7 +10,7 @@
       <%= form.fields_for :micro_services, service do |f| %>
         <tr>
           <td>
-            <%= service.name %>
+            <%= f.text_field :name, class: "form-control" %>
           </td>
           <td>
             <%= f.text_field :price, class: "form-control" %>
