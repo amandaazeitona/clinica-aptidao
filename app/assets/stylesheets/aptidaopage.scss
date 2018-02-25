@@ -47,6 +47,14 @@ body {
 
 }
 
+.navbar-default .navbar-header .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: rgb(255, 255, 255);
+}
+
 .navbar-default.affix .nav > li.active>a,
 .navbar-default.affix .nav>li.active>a:focus {
     color: rgba(255, 255, 255, 0.5);
@@ -54,7 +62,7 @@ body {
 }
 
 .navbar-default.affix .nav > li>a {
-  color: #fff;
+    color: #fff;
 }
 
 .navbar-default.affix .nav>li>a:focus {
@@ -63,13 +71,13 @@ body {
 
 .navbar-default.affix .nav > li>a:hover,
 .navbar-default.affix .nav>li>a:focus:hover {
-  color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar-default.affix .navbar-header .navbar-brand:hover,
-.navbar-default.affix .navbar-header .navbar-brand:focus {
-  color: rgba(255, 255, 255, 0.5);
+.navbar-default.affix .navbar-header .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.5);
 }
+
 
 .collapse.navbar-collapse.in {
     //background-color: rgba(129, 139, 168, 0.8);
