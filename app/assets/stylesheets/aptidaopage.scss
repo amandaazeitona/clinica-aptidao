@@ -1,6 +1,7 @@
 @import 'base/reusables';
 $aptidao-azul: #002554;
 $aptidao-azul-light: #b7b4e0;
+$aptidao-azul-translucid: rgba(0, 36, 84, 0.7);
 
 body {
     font-family: 'Lato', Merriweather,'Helvetica Neue',Arial,sans-serif;
@@ -46,22 +47,28 @@ body {
 
 }
 
+.navbar-default.affix .nav > li.active>a,
+.navbar-default.affix .nav>li.active>a:focus {
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
 .navbar-default.affix .nav > li>a {
   color: #fff;
 }
 
 .navbar-default.affix .nav>li>a:focus {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-default.affix .nav > li>a:hover,
 .navbar-default.affix .nav>li>a:focus:hover {
-  color: $aptidao-azul-light;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-default.affix .navbar-header .navbar-brand:hover,
 .navbar-default.affix .navbar-header .navbar-brand:focus {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .collapse.navbar-collapse.in {
@@ -97,6 +104,15 @@ h4.phones {
     border-style: solid;
     border-color: $aptidao-azul;
     border-width: 3px;
+
+    a:link, a:visited, a:active {
+        text-decoration: none;
+        color: $aptidao-azul;
+    }
+
+    a:hover {
+        color: $aptidao-azul-translucid;
+    }
 }
 
 //******************* SOBRE *************************************************//
@@ -159,7 +175,13 @@ hr {
 
 //******************* SERVIÇOS *************************************************//
 
+
+
 //******************* CONTATO ***********************************************//
+
+.contact-section>p {
+    font-size: 17px;
+}
 
 .map {
   display: block;
@@ -177,6 +199,11 @@ hr {
     >h3 {
         color: $aptidao-azul;
         font-weight: 600;
+        font-size: 22px;
+    }
+
+    >p {
+        font-size: 16px;
     }
 }
 
@@ -187,7 +214,7 @@ hr {
 
 
 .service-image {
-    height: 120px;
+    height: 110px;
 }
 
 
@@ -343,6 +370,11 @@ hr {
 
     .navbar-default .navbar-header .navbar-brand {
         // color: $aptidao-azul;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 25px;
     }
 
@@ -360,6 +392,7 @@ hr {
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
         font-size: 15px;
+        color: #fff;
     }
 
     .fa.fa-facebook-square {
@@ -371,11 +404,11 @@ hr {
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     header .header-content .header-content-inner p {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .mvv {
@@ -388,8 +421,7 @@ hr {
     }
 
 }
-
-@media(max-width:599px) {
+@media(min-width:370px)and(max-width:599px) {
     .navbar-default {
         //height: 4em;
         border-color: rgb(182, 182, 182);
@@ -412,7 +444,7 @@ hr {
     }
 
     .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .navbar-default.affix .nav > li>a {
@@ -420,11 +452,70 @@ hr {
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 29px !important;
+        font-size: 35px !important;
     }
 
     header .header-content .header-content-inner p {
-        font-size: 19px;
+        font-size: 24px;
+    }
+
+    h4.phones {
+        font-size: 23px;
+        font-weight: 600;
+        margin-bottom: 0.3em;
+        padding: 10px;
+    }
+
+
+
+    .mvv {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    .inner-container {
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width:369px) {
+    .navbar-default {
+        //height: 4em;
+        border-color: rgb(182, 182, 182);
+        //background-color: rgba(129, 139, 168, 0.5);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 22px;
+    }
+
+    .navbar-default.affix .nav > li>a {
+        color: #fff;
+    }
+
+    header .header-content .header-content-inner h1 {
+        font-size: 28px !important;
+    }
+
+    header .header-content .header-content-inner p {
+        font-size: 17px;
     }
 
     h4.phones {
@@ -515,9 +606,6 @@ hr {
     font-size: 15px;
   }
 
-  .mvv p {
-    font-size: 16px;
-  }
 
   iframe {
     width: 516px;
