@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Serviços</h1>
+
+<table class="table">
+  <% @services.each do |service| %>
+    <tr>
+      <td> <%= service.name %> </td>
+      <td> <%= link_to 'Editar Preços', edit_service_path(service), class: "btn btn-success" %> </td>
+      <td> <%= link_to 'Ver Serviços Atrelados', service_path(service), class: "btn btn-success" %> </td>
+    </tr>
+  <% end %>
+</table>

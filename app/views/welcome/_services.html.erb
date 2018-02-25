@@ -10,17 +10,18 @@
     <div class="container">
         <div class="row">
             <!-- "botao" e modal 1ª habilitacao -->
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
                 <button type="button" class="service-button" data-toggle="modal" data-target="#modal-primeira-habilitacao">
                     <div class="service-box">
-                        <%= image_tag("primeira-habilitacao.jpg", :alt => "primeira habilitacao", :class => "service-image") %>
+                        <%= image_tag("primeira-habilitacao.png", :alt => "primeira habilitacao", :class => "service-image") %>
                         <h3>1ª Habilitação</h3>
-                        <p class="text-muted">Todas as informações para quem deseja obter a 1ª habilitação.</p>
+                        <p class="text-muted">Quer tirar sua carteira? </p>
+                        <p class="text-muted">Consulte aqui o passo a passo.</p>
                     </div>
                 </button>
                 <div id="modal-primeira-habilitacao" class="modal fade" role="dialog">
                     <div class="modal-dialog">
-                    
+
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
@@ -28,40 +29,52 @@
                                 <h3 class="modal-title">1ª HABILITAÇÃO</h3>
                             </div>
                             <div class="modal-body">
-                                <p>Com a entrada em vigor do novo Código de Transito Brasileiro, o caminho para obter sua habilitação mudou.</p>
-                                <p>Sua primeira habilitação só poderá ser solicitada nas categorias "A" - Motocicleta, "B" - Automóvel de passeio ou "AB" - Carro e Moto.</p>
-                                <p>Para se candidatar à obtenção da CNH o candidato deverá:</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i></span> ser maior de 18 anos;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i></span> ser penalmente imputável;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i></span> saber ler e escrever;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i></span> possuir carteira de identidade ou equivalente;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i></span> possuir CPF.</p>
                                 <br>
-                                <p>Após a verificação desses requisitos siga os passos abaixo.</p>
-                                <br>
-                                <p>1º PASSO:</p>
-                                <p>Não vá diretamente a uma auto-escola! Entre em contato com uma clínica credenciada.</p>
-                                <br>
-                                <p>2º PASSO:</p>
-                                <p>Marque um horário para atendimento e encaminhe-se à Clínica Aptidão com os seguintes documentos:</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe);</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> CPF;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> uma foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos);</p>
-                                <br>
-                                <p>3º PASSO:</p>
-                                <p>Após a abertura do processo, realize os exames médicos (clínico e oftamológico) e psicológico. Esses exames têm em média de 1 hora a 2 horas de duração.</p>
-                                <br>
-                                <p>4º PASSO:</p>
-                                <p>Depois de realizar os exames, vocẽ receberá um boleto que deverá ser pago no Banco do Brasil ou no BRB no prazo máximo de 48 horas. Efetuado o pagamento retorne à clínica, após 24 horas da realização dos testes, com o comprovante de pagamento em mãos para receber o processo e os resultados dos exaxmes. Em seguida, encaminhe o processo ao Centro de Formação de Condutores (CFC) de sua preferência.</p>
-                                <br>
-                                <p>5º PASSO:</p>
-                                <p>Realizar o curso e as provas teórica e prática no DETRAN. Com todos os exames OK é só aguardar a sua carteira de motorista em casa.</p>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Modalidade</th>
+                                            <th>Valor (R$)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      <% @first.sort_by{ |a| a[:price] }.each do |service| %>
+                                        <tr>
+                                            <td><%= service.name %></td>
+                                            <td><%= service.price %></td>
+                                        </tr>
+                                      <% end %>
+                                    </tbody>
+                                </table>
                                 <br>
                                 <br>
-                                <p>VALOR: R$ <%= @prices[0].price %></p>
+
+                                <h4>A primeira habilitação é emitida nas categorias "A" - Motocicleta, "B" - Automóvel de Passeio ou "AB" - Moto e Carro. </h4>
+                                 <br><br>
+
+                                <h3 class="emphasis">COMO PROCEDER</h3>
+                                <br>
+                                <p>Não vá diretamente a uma auto-escola! Entre em contato com uma clínica credenciada. </p>
+
+                                <p>Marque um horário para atendimento e encaminhe-se à Clínica Aptidão com os documentos abaixo para abertura do processo e realização dos exames: </p>
+                                <br>
+                                <table class="table table-condensed internal">
+                                    <thead>
+                                        <tr>
+                                            <th>Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe)</th>
+                                        </tr>
+                                        <tr>
+                                            <th>CPF</th>
+                                        </tr>
+                                        <tr>
+                                            <th>02 (duas) fotos 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos)</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
                             </div>
                         </div>
                         <!-- end Modal content-->
@@ -70,17 +83,18 @@
             </div>
 
             <!-- "botao" e modal renovacao cnh -->
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
                 <button type="button" class="service-button" data-toggle="modal" data-target="#modal-renovacao">
                     <div class="service-box">
-                        <%= image_tag("renovacao.jpg", :alt => "renovacao habilitacao", :class => "service-image") %>
+                        <%= image_tag("renovacao.png", :alt => "renovacao habilitacao", :class => "service-image") %>
                         <h3>Renovação da CNH</h3>
-                        <p class="text-muted">Informação sobre os procedimentos para quem deseja renovar a habilitação.</p>
+                        <p class="text-muted">Simples e Rápido. </p>
+                        <p class="text-muted">Saiba mais!</p>
                     </div>
                 </button>
                 <div id="modal-renovacao" class="modal fade" role="dialog">
                     <div class="modal-dialog">
-                    
+
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
@@ -88,33 +102,66 @@
                                 <h3 class="modal-title">RENOVAÇÃO DA CNH</h3>
                             </div>
                             <div class="modal-body">
-                                <p>A renovação da sua CNH deverá ser feita de 5 em 5 anos até os 65 anos de idade e de 3 em 3 anos após essa idade. Vencido esse prazo o condutor deverá procurar a Clínica Aptidão para fazer sua renovação mediante a realização dos exames médicos. Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, também será necessária a realização do exame psicológico.</p>
-                                <p>Quando a data de vencimento de sua habilitação houver expirado, siga as instruções:</p>
-                                <br>
-                                <p>1º PASSO:</p>
-                                <p>Entre em contato conosco para verificar os nossos horários de atendimento. Sempre buscamos atendê-lo de forma rápida e eficiente!</p>
-                                <br>
-                                <p>2º PASSO:</p>
-                                <p>Providencie cópias dos seguintes documentos:</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe);</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> CPF;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> carteira de motorista;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> uma foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior).</p>
-                                <br>
-                                <p>3º PASSO:</p>
-                                <p>Compareça à Clínica Aptidão para a realização dos exames.</p>
-                                <br>
-                                <p>4º PASSO:</p>
-                                <p>Receba seu boleto para pagamento e o efetue nas agências, conveniências ou Internet Banking do Banco do Brasil ou do BRB. O boleto pago junto com a cópia de sua Habilitação o autoriza a conduzir seu veículo por 20 dias no DF.</p>
-                                <br>
-                                <p>5º PASSO:</p>
-                                <p>Preenchidos todos os requisitos, aguarde sua CNH no seu endereço. O prazo para entrega é de 10 a 15 dias corridos.</p>
-                                <br>
-                                <br>
-                                <p>VALOR: R$ <%= @prices[1].price %></p>
+
+                              <h3>DF</h3>
+                              <table class="table table-condensed">
+                                  <thead>
+                                      <tr>
+                                          <th>Modalidade</th>
+                                          <th>Valor (R$)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <% @second.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                      <tr>
+                                          <td><%= service.name %></td>
+                                          <td><%= service.price %></td>
+                                      </tr>
+                                    <% end %>
+                                  </tbody>
+                              </table>
+                              <h3>Outra UF</h3>
+                              <table class="table table-condensed">
+                                  <thead>
+                                      <tr>
+                                          <th>Modalidade</th>
+                                          <th>Valor (R$)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <% @third.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                      <tr>
+                                          <td><%= service.name %></td>
+                                          <td><%= service.price %></td>
+                                      </tr>
+                                    <% end %>
+                                  </tbody>
+                                  </tbody>
+                              </table>
+                              <br>
+                              <br>
+
+                              <h3 class="emphasis">COMO PROCEDER</h3>
+                              <br>
+
+                              <p>A renovação da carteira de motorista é feita de 5 em 5 anos até os 65 anos de idade e de 3 em 3 anos após essa idade.</p>
+                              <p>Vencido esse prazo, dirija-se a Clínica Aptidão para realização dos exames.</p>
+                              <p>Caso exerça atividade remunerada, ou seja, trabalhe com a carteira de motorista, será necessária a realização dos exames psicológicos.</p>
+                              <br>
+                              <table class="table table-condensed internal">
+                                  <thead>
+                                      <tr>
+                                          <th>CNH Original</th>
+                                      </tr>
+                                      <tr>
+                                          <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
+                                      </tr>
+                                  </thead>
+                              </table>
+
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                             </div>
                         </div>
                         <!-- end Modal content-->
@@ -124,17 +171,18 @@
             </div>
 
             <!-- "botao" e modal mudanca de categoria -->
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
                 <button type="button" class="service-button" data-toggle="modal" data-target="#modal-mudanca">
                     <div class="service-box">
-                            <%= image_tag("mudanca.jpg", :alt => "mudança de categoria", :class => "service-image") %>
+                        <%= image_tag("mudanca.png", :alt => "mudança de categoria", :class => "service-image") %>
                         <h3>Mudança de categoria</h3>
-                        <p class="text-muted">Informações sobre o procedimentot de mudança de categoria.</p>
+                        <p class="text-muted">Sua categoria está nas exigências do Código de Trânsito?</p>
+                        <p class="text-muted">Verifique aqui!</p>
                     </div>
                 </button>
                 <div id="modal-mudanca" class="modal fade" role="dialog">
                     <div class="modal-dialog">
-                    
+
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
@@ -142,63 +190,73 @@
                                 <h3 class="modal-title">MUDANÇA DE CATEGORIA</h3>
                             </div>
                             <div class="modal-body">
-                                <p>Para esse serviço é preciso que o condutor preste atenção em alguns requisitos e conheça cada categoria.</p>
-                                <p>Existem 5 categorias, que variam de acordo com a finalidade e o grau de responsabilidade exigido para alguns veículos:</p>
-                                <br>
-                                <p><i class="fa fa-motorcycle fa-2x" aria-hidden="true"></i>        CATEGORIA "A"</p>
-                                <p>Veículos motorizados de duas ou três rodas, com ou sem carro lateral.</p>
-                                <br>
-                                <p><i class="fa fa-car fa-2x" aria-hidden="true"></i>        CATEGORIA "B"</p>
-                                <p>Veículos motorizados, que não estejam contemplados na categoria "A". Não devem ter mais de oito lugares, excluído o espaço para o motorista, e não apresentar peso bruto total superior a 3,5 mil quilogramas.</p>
-                                <br>
-                                <p><i class="fa fa-truck fa-2x" aria-hidden="true"></i>        CATEGORIA "C"</p>
-                                <p>Veículos motorizados usados para transporte de carga, cujo peso bruto total seja superior a 3,5 mil quilogramas.</p>
-                                <br>
-                                <p><i class="fa fa-bus fa-2x" aria-hidden="true"></i>        CATEGORIA "D"</p>
-                                <p>Veículos motorizados usados no transporte coletivo de passageiros e de escolares ou que tenham mais de oito lugares, excluído o espaço do motorista.</p>
-                                <br>
-                                <p><i class="fa fa-car fa-2x" aria-hidden="true"></i>        CATEGORIA "E"</p>
-                                <p>Estão incluídos os veículos das categorias "B", "C" ou "D" que tenham uma parte articulada ou que estejam acoplados a reboque ou semi-reboque; com peso bruto total igual ou superior a 6 mil quilogramas ou espaço para mais de oito lugares. Para rebocar trailer, o motorista também precisa de habilitação nessa categoria.</p>
-                                <br>
-                                <br>
-                                <p>Requisitos para mudança:</p>
 
-                                <p><i class="fa fa-truck fa-2x" aria-hidden="true"></i>        CATEGORIA "C"</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> Estar habilitado há, no mínimo, 1 (um) ano na categoria "B";</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente em infração de natureza média, nos últimos 12 meses.</p>
+                              <h3>DF</h3>
+                              <table class="table table-condensed">
+                                  <thead>
+                                      <tr>
+                                          <th>Modalidade</th>
+                                          <th>Valor (R$)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <% @fourth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                      <tr>
+                                          <td><%= service.name %></td>
+                                          <td><%= service.price %></td>
+                                      </tr>
+                                    <% end %>
+                                  </tbody>
+                              </table>
+                              <h3>Outra UF</h3>
+                              <table class="table table-condensed">
+                                  <thead>
+                                      <tr>
+                                          <th>Modalidade</th>
+                                          <th>Valor (R$)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <% @fifth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                      <tr>
+                                          <td><%= service.name %></td>
+                                          <td><%= service.price %></td>
+                                      </tr>
+                                    <% end %>
+                                  </tbody>
+                              </table>
+                              <br>
+                              <br>
+                                <h3 class="emphasis">REQUISITOS PARA MUDANÇA:</h3>
                                 <br>
-                                <p><i class="fa fa-bus fa-2x" aria-hidden="true"></i>        CATEGORIA "D"</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> Estar habilitado há, no mínimo, 2 (dois) anos na categoria "B" ou no mínimo há um ano na caterogia "C";</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> ter no mínimo 21 anos de idade;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente em infração de natureza média, nos últimos 12 meses.</p>
+                                <h4><%= image_tag("truck.png", :alt => "caminhao") %>        CATEGORIA "C"</h4>
+                                <p>Estar habilitado há, no mínimo, 1 (um) ano na categoria "B";</p>
                                 <br>
-                                <p><i class="fa fa-car fa-2x" aria-hidden="true"></i>        CATEGORIA "E"</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> Estar habilitado há, no mínimo, 1 (um) ano na categoria "D";</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> ter no mínimo 21 anos de idade;</p>
-                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> não ter cometido nenhuma infração de natureza grave ou gravíssima, nem ser reincidente em infração de natureza média, nos últimos 12 meses.</p>
+                                <h4><%= image_tag("bus.png", :alt => "onibus") %>        CATEGORIA "D"</h4>
+                                <p>Estar habilitado há, no mínimo, 2 (dois) anos na categoria "B" ou no mínimo há um ano na categoria "C";</p>
+                                <p>Ter, no mínimo, 21 anos de idade;</p>
                                 <br>
+                                <h4><%= image_tag("big-truck.png", :alt => "grande caminhao") %>        CATEGORIA "E"</h4>
+                                <p>Estar habilitado há, no mínimo, 1 (um) ano na categoria "D";</p>
                                 <br>
-                                <p>OBSERVAÇÃO: A categoria "A" poderá ser incluída em qualquer categoria. Caso o condutor seja habilitado somente na caterogia "A", poderá incluir primeiramente a categoria "B" e gradualmente as demais categorias.</p>
+
+                                <h3 class="emphasis">COMO PROCEDER:</h3>
                                 <br>
-                                <br>
-                                <p>Para a realização desse serviço, providencie cópias dos seguintes documentos:</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe);</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> CPF;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> carteira de motorista;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> uma foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior).</p>
-                                <br>
-                                <br>
-                                <p>PROCEDIMENTO:</p>
-                                <p>Compareça à Clínica Aptidão com a documentação acima para a abertura do processo e a realização dos exames clínico e oftamológico. Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização do exame psicológico.</p>
-                                <p>Após a realização dos exames será entregue um boleto com o prazo máximo para pagamento de 48 horas no Banco do Brasil ou no BRB. </p>
-                                <p>Efetuado o pagamento você deverá retornar à clínica, após 24 horas da realização dos testes, com o comprovante de pagamento em mãos para receber o processo com os resultados dos exames.</p>
-                                <p>Em seguida, encaminhe o processo ao Centro de Formação de Condutores (CFC) de sua preferência.</p>
-                                <p>Após a aprovação na prova prática basta aguardar a nova habilitação em casa.</p>
-                                <br><br>
-                                <p>VALOR: R$ <%= @prices[2].price %></p>
+                                <p>Compareça à Clínica Aptidão com a documentação abaixo para a abertura do processo e realização dos exames.</p>
+                                <p>Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização do exame psicológico.</p>
+                                <table class="table table-condensed internal">
+                                    <thead>
+                                        <tr>
+                                            <th>CNH Original</th>
+                                        </tr>
+                                        <tr>
+                                            <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
+                                        </tr>
+                                    </thead>
+                                </table>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                             </div>
                         </div>
                         <!-- end Modal content-->
@@ -208,17 +266,18 @@
             </div>
 
             <!-- "botao" e modal adicao de categoria -->
-            <div class="col-lg-4 col-lg-offset-2 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
                 <button type="button" class="service-button" data-toggle="modal" data-target="#modal-adicao">
                     <div class="service-box">
-                        <%= image_tag("adicionar.png", :alt => "adicionar habilitacao", :class => "add-image") %>
+                        <%= image_tag("adicionar.png", :alt => "adicionar habilitacao", :class => "service-image") %>
                         <h3>Adição de categoria</h3>
-                        <p class="text-muted">Procedimento para quem deseja adicionar uma nova categoria à sua habilitação.</p>
-                    </div>    
+                        <p class="text-muted">Já é habilitado e quer adicionar outra categoria? </p>
+                        <p class="text-muted">Clique aqui!</p>
+                    </div>
                 </button>
                 <div id="modal-adicao" class="modal fade" role="dialog">
                     <div class="modal-dialog">
-                    
+
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
@@ -226,24 +285,62 @@
                                 <h3 class="modal-title">ADIÇÃO DE CATEGORIA</h3>
                             </div>
                             <div class="modal-body">
-                                <p>Os condutores habilitados nas categorias "B", "C", "D" ou "E" poderão requerer adição da categoria "A", e os condutores habilitados na categoria "A", poderão requerer somente adição da categoria "B".</p>
-                                <br>
-                                <p>Para adicionar uma categoria à sua CNH você deverá comparecer à Clínica Aptidão com os seguintes documentos:</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe);</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> CPF;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> carteira de motorista;</p>
-                                <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> uma foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior).</p>
-                                <br>
-                                <p>Será aberto o processo e realizados os exames médicos. Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização do exame psicológico.</p>
-                                <p>Após a realização dos exames será emitido um boleto com o prazo máximo para pagamento de 48 horas no Banco do Brasil ou no BRB. </p>
-                                <p>Efetuado o pagamento você deverá retornar à clínica, após 24 horas da realização dos testes, com o comprovante de pagamento em mãos para receber o processo com os resultados dos exames.</p>
-                                <p>Em seguida, encaminhe o processo ao Centro de Formação de Condutores (CFC) de sua preferência para realização das 15 horas em aulas práticas e a prova obrigatória para a adição da categoria desejada.</p>
-                                <p>Após a aprovação na prova prática basta aguardar a CNH em casa.</p>
-                                <br><br>
-                                <p>VALOR: R$ <%= @prices[3].price %></p>
+
+                              <h3>DF</h3>
+                              <table class="table table-condensed">
+                                  <thead>
+                                      <tr>
+                                          <th>Modalidade</th>
+                                          <th>Valor (R$)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <% @sixth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                      <tr>
+                                          <td><%= service.name %></td>
+                                          <td><%= service.price %></td>
+                                      </tr>
+                                    <% end %>
+                                  </tbody>
+                              </table>
+                              <h3>Outra UF</h3>
+                              <table class="table table-condensed">
+                                  <thead>
+                                      <tr>
+                                          <th>Modalidade</th>
+                                          <th>Valor (R$)</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <% @seventh.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                      <tr>
+                                          <td><%= service.name %></td>
+                                          <td><%= service.price %></td>
+                                      </tr>
+                                    <% end %>
+                                  </tbody>
+                              </table>
+                              <br>
+                              <br>
+                              <p>Os condutores habilitados nas categorias "B", "C", "D" ou "E" poderão adicionar a categoria "A", e os condutores habilitados na categoria "A", poderão adicionar a categoria "B".</p>
+                              <br>
+                              <h3 class="emphasis">COMO PROCEDER</h3>
+                              <p>Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização dos exames psicológicos.</p>
+                              <p>Para adicionar uma categoria à sua CNH você deverá comparecer à Clínica Aptidão com os seguintes documentos:</p>
+                              <table class="table table-condensed internal">
+                                  <thead>
+                                      <tr>
+                                          <th>CNH Original</th>
+                                      </tr>
+                                      <tr>
+                                          <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
+                                      </tr>
+                                  </thead>
+                              </table>
+
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                             </div>
                         </div>
                         <!-- end Modal content-->
@@ -252,42 +349,117 @@
 
             </div>
 
-            <!-- "botao" e modal instrutor -->
-            <div class="col-lg-4 col-md-12 text-center">
-                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-instrutor">
+
+            <!-- "botao" e modal atividade remunerada -->
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-remunerada">
                     <div class="service-box">
-                        <%= image_tag("credenciamento.jpg", :alt => "instrutor diretor de auto-escola e examinador", :class => "service-image") %>
-                        <h3>Instrutor, Diretor de auto-escola e Examinador</h3>
-                        <p class="text-muted">Informações para quem deseja se tornar um profissional do ramo de obtenção de habilitação.</p>
-                    </div>        
+                        <%= image_tag("coin.png", :alt => "instrutor diretor de auto-escola e examinador", :class => "service-image") %>
+                        <h3>Inclusão de Atividade Remunerada</h3>
+                        <p class="text-muted">Precisa trabalhar com mobilidade?</p>
+                        <p class="text-muted">Saiba como!</p>
+                    </div>
                 </button>
-                <div id="modal-instrutor" class="modal fade" role="dialog">
+                <div id="modal-remunerada" class="modal fade" role="dialog">
                     <div class="modal-dialog">
-                    
+
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">INSTRUTOR, DIRETOR DE AUTO-ESCOLA E EXAMINADOR</h3>
+                                <h3 class="modal-title">INCLUSÃO DE ATIVIDADE REMUNERADA</h3>
                             </div>
                             <div class="modal-body">
-                                <p>De acordo com o credenciamento junto ao DETRAN-DF, a Clínica Aptidão também realiza exames psicológicos para ingresso no curso de instrutor, examinador e diretor de auto-escola.</p>
-                                <br>
-                                <p>Entre em contato para marcarmos um horário.</p>
-                                <br><br>
-                                <p>VALOR: R$ <%= @prices[4].price %></p>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Modalidade</th>
+                                        <th>Valor (R$)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <% @eighth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                    <tr>
+                                        <td><%= service.name %></td>
+                                        <td><%= service.price %></td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>
+                            </table>
+
+                            <p>Para exercer atividade remunerada com a sua habilitação é necessário realizar exames psicológicos para incluir a autorização na CNH. </p>
+                            <p>Entre em contato para agendarmos os exames.</p>
+
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                             </div>
                         </div>
                         <!-- end Modal content-->
                     </div>
                 </div>
 
-                
+
+                <!-- "botao" e modal instrutor -->
+
+
+
             </div>
+
+            <!-- "botao" e modal instrutor -->
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-instrutor">
+                    <div class="service-box">
+                        <%= image_tag("credenciamento.png", :alt => "instrutor diretor de auto-escola e examinador", :class => "service-image") %>
+                        <h3>Instrutor, Diretor de auto-escola e Examinador</h3>
+                        <p class="text-muted">Seja um profissional da área de trânsito. </p>
+                        <p class="text-muted">Saiba como!</p>
+                    </div>
+                </button>
+                <div id="modal-instrutor" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title">Instrutor, Diretor de Auto-Escola e Examinador </h3>
+                            </div>
+                            <div class="modal-body">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Modalidade</th>
+                                        <th>Valor (R$)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <% @ninth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                                    <tr>
+                                        <td><%= service.name %></td>
+                                        <td><%= service.price %></td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>
+                            </table>
+
+                            <p>A Clínica Aptidão também realiza exames psicológicos para ingresso no curso de instrutor, examinador e diretor de auto-escola.</p>
+                            <p>Entre em contato para agendarmos os exames.</p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                        <!-- end Modal content-->
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
         </div>
     </div>
 </section>
-

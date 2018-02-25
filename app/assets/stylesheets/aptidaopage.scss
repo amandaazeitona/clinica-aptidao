@@ -1,13 +1,14 @@
 @import 'base/reusables';
-$aptidao-azul: rgba(31, 17, 158, 0.781);
-$aptidao-azul-dark: #2318be;
+$aptidao-azul: #002554;
+$aptidao-azul-light: #b7b4e0;
+$aptidao-azul-translucid: rgba(0, 36, 84, 0.7);
 
 body {
-    font-family: 'Roboto Slab', Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Lato', Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
 //******************* NAVBAR *************************************************//
 .navbar-default {
-    border-color: transparent;
+    background-color: $aptidao-azul;
 }
 
 .logo-aptidao {
@@ -32,32 +33,98 @@ body {
     font-size: 30px;
 }
 
-//******************* HEADER *************************************************//
-header {
-    background-image: asset-data-url("indice5.jpg");
+.navbar-default.affix {
+    background-color: $aptidao-azul;
 }
 
-hr {
-    border-color: $aptidao-azul;
+.navbar-default.affix .navbar-header .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a:focus {
+    color: #fff;
+
+}
+
+.navbar-default.affix .nav > li.active>a,
+.navbar-default.affix .nav>li.active>a:focus {
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+.navbar-default.affix .nav > li>a {
+  color: #fff;
+}
+
+.navbar-default.affix .nav>li>a:focus {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-default.affix .nav > li>a:hover,
+.navbar-default.affix .nav>li>a:focus:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-default.affix .navbar-header .navbar-brand:hover,
+.navbar-default.affix .navbar-header .navbar-brand:focus {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.collapse.navbar-collapse.in {
+    //background-color: rgba(129, 139, 168, 0.8);
+}
+
+//******************* HEADER *************************************************//
+header {
+    background-image: asset-data-url("header2.png");
+    color: $aptidao-azul;
 }
 
 header .header-content .header-content-inner h1 {
     font-size: 65px;
+    font-family: 'Lato';
 }
 
-.badge {
-    padding: 15px;
-    font-size: 60px;
+header .header-content .header-content-inner p {
+     font-size: 23px;
+     font-weight: 500;
+     color: $aptidao-azul;
 }
 
+h4.phones {
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    background-color: #ffffff69;
+    color: $aptidao-azul;
+    padding: 10px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: $aptidao-azul;
+    border-width: 3px;
 
- header .header-content .header-content-inner p {
-     font-size: 21px;
-     font-weight: 400;
-     color: rgb(255, 255, 255);
- }
+    a:link, a:visited, a:active {
+        text-decoration: none;
+        color: $aptidao-azul;
+    }
+
+    a:hover {
+        color: $aptidao-azul-translucid;
+    }
+}
 
 //******************* SOBRE *************************************************//
+
+.fa.fa-sm {
+  font-size: 0.3em;
+  vertical-align: middle;
+}
+
+.bg-primary {
+    background-color: $aptidao-azul;
+}
 
 .section-heading {
     font-weight: 800;
@@ -101,7 +168,6 @@ hr {
     }
     >p{
         font-size: 20px;
-        font-style: italic;
         margin-bottom: 0.5em;;
     }
 
@@ -109,7 +175,13 @@ hr {
 
 //******************* SERVIÇOS *************************************************//
 
+
+
 //******************* CONTATO ***********************************************//
+
+.contact-section>p {
+    font-size: 17px;
+}
 
 .map {
   display: block;
@@ -119,13 +191,19 @@ hr {
 
 //******************* RESPONSIVIDADE ****************************************//
 
+
 .service-box {
-    margin-top: 4em;
-    margin-bottom: 5em;
+    margin-top: 2em;
+    margin-bottom: 4em;
 
     >h3 {
         color: $aptidao-azul;
         font-weight: 600;
+        font-size: 22px;
+    }
+
+    >p {
+        font-size: 16px;
     }
 }
 
@@ -136,14 +214,9 @@ hr {
 
 
 .service-image {
-    height: 120px;
+    height: 110px;
 }
 
-.add-image {
-    height: 100px;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
 
 .service-button {
     background-color: transparent;
@@ -152,7 +225,7 @@ hr {
 }
 
 .modal .modal-dialog {
-    
+
     border-radius: 0px;
     h3 {
         color: $aptidao-azul;
@@ -165,26 +238,74 @@ hr {
 }
 
 .modal-header {
-    background-color: #fff;
+    background-color: #d8d8d8;
+
+    >h3 {
+        font-weight: bolder !important;
+    }
 }
 
 
 .modal-body {
-    background-color: rgba(80, 80, 80, 0.884);
-    color: #fff;
-   
+    background-color: #ececec; // #9eacc1
+    color: $aptidao-azul;
+
     >p {
-        text-align: justify;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    li {
+        text-align: left;
+    }
+
+    td {
+        text-align: left;
+    }
+
+    table {
+        font-size: 18px;
+    }
+
+    h3.emphasis {
+        border-bottom: solid;
+        border-color: $aptidao-azul;
+        padding-bottom: 5px;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+
+    .internal {
+        margin-left: auto;
+        margin-right: auto;
+
+        th {
+            text-align: center;
+        }
+    }
+
+
+
+    .panel {
+        border-radius: 0px;
+    }
+
+    .panel-body {
+        font-size: 17px;
     }
 }
 
 .modal-footer {
-    background-color: #fff;
+    background-color:$aptidao-azul;
 }
 
 
 
 @media(min-width:993px){
+
+
     .container-fluid {
         width: 90%;
     }
@@ -227,26 +348,33 @@ hr {
         align-items: center;
     }
 
-    
+
     .modal .modal-dialog {
-    
-        width: 50%;
+
+        width: 70%;
     }
-    
+
     .modal-content {
         width: 100%;
     }
 
-
+    .internal {
+        width: 60%;
+    }
 
 
 
 }
 
-@media(min-width:769px)and(max-width:992px) {
+@media(min-width:600px)and(max-width:992px) {
 
     .navbar-default .navbar-header .navbar-brand {
         // color: $aptidao-azul;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 25px;
     }
 
@@ -264,25 +392,23 @@ hr {
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
         font-size: 15px;
+        color: #fff;
     }
 
     .fa.fa-facebook-square {
         font-size: 23px;
     }
 
+    .fa.fa-instagram {
+        font-size: 23px;
+    }
+
     header .header-content .header-content-inner h1 {
-        font-size: 35px;
+        font-size: 38px;
     }
 
     header .header-content .header-content-inner p {
-        font-size: 20px;
-        color: rgb(255, 255, 255);
-    }
-
-    .badge {
-        padding: 10px;
-        font-size: 40px;
-        background-color: $aptidao-azul;
+        font-size: 21px;
     }
 
     .mvv {
@@ -295,32 +421,110 @@ hr {
     }
 
 }
-
-@media(max-width:768px) {
+@media(min-width:370px)and(max-width:599px) {
     .navbar-default {
         //height: 4em;
         border-color: rgb(182, 182, 182);
+        //background-color: rgba(129, 139, 168, 0.5);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        font-size: 24px;
-        color: $aptidao-azul;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 22px;
+    }
+
+    .navbar-default.affix .nav > li>a {
+        color: #fff;
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 30px;
+        font-size: 35px !important;
+    }
+
+    header .header-content .header-content-inner p {
+        font-size: 24px;
+    }
+
+    h4.phones {
+        font-size: 23px;
+        font-weight: 600;
+        margin-bottom: 0.3em;
+        padding: 10px;
+    }
+
+
+
+    .mvv {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    .inner-container {
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width:369px) {
+    .navbar-default {
+        //height: 4em;
+        border-color: rgb(182, 182, 182);
+        //background-color: rgba(129, 139, 168, 0.5);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 22px;
+    }
+
+    .navbar-default.affix .nav > li>a {
+        color: #fff;
+    }
+
+    header .header-content .header-content-inner h1 {
+        font-size: 28px !important;
     }
 
     header .header-content .header-content-inner p {
         font-size: 17px;
-        color: rgb(255, 255, 255);
     }
 
-    .badge {
+    h4.phones {
+        font-size: 23px;
+        font-weight: 600;
+        margin-bottom: 0.3em;
         padding: 10px;
-        font-size: 30px;
-        background-color: $aptidao-azul;
     }
+
 
 
     .mvv {
@@ -358,7 +562,7 @@ hr {
 .open > .dropdown-toggle.btn-primary {
     border-color: #fff;
     border-width: 15px;
-    background-color:$aptidao-azul-dark ;
+    background-color:$aptidao-azul-light ;
 }
 
 
@@ -374,4 +578,38 @@ hr {
     .gray {
         color: #8f8f8f;
     }
+}
+
+@media(min-height:600px)and(max-height:700px) {
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 50px 0px;
+  }
+
+  .service-image {
+    height: 90px;
+  }
+
+  .text-muted {
+    font-size: 12px;
+  }
+
+  .text-faded {
+    font-size: 15px;
+  }
+
+
+  iframe {
+    width: 516px;
+    height: 344px;
+  }
+
 }
