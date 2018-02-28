@@ -6,7 +6,7 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.where(id: (1..9))
+    @services = Service.all.sort_by{ |a| a[:id]}[0..8]
   end
 
   # GET /services/1
