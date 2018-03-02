@@ -1,7 +1,7 @@
 <h1><%= @service.name %></h1>
 
 <table class="table">
-  <% @service.micro_services[1..-1].each do |service| %>
+  <% @service.micro_services.sort_by{ |a| a[:id] }[1..-1].each do |service| %>
     <tr>
       <td> <%= service.name %> </td>
       <td> <%= service.price %> </td>
