@@ -6,7 +6,7 @@
       <th> Preço </th>
     </tr>
 
-    <% @service.micro_services[1..-1].each do |service| %>
+    <% @service.micro_services.sort_by{ |a| a[:id] }[1..-1].each do |service| %>
       <%= form.fields_for :micro_services, service do |f| %>
         <tr>
           <td>
