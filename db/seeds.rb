@@ -16,29 +16,29 @@ habilitacao = Service.new price: 0, name: "1ª Habilitação"
 habilitacao.macro_service = habilitacao
 habilitacao.save
 
-renovacao = Service.new price: 0, name: "Renovação de CNH (DF)"
-renovacao.macro_service = renovacao
-renovacao.save
+renovacao_df = Service.new price: 0, name: "Renovação de CNH (DF)"
+renovacao_df.macro_service = renovacao_df
+renovacao_df.save
 
-renovacao = Service.new price: 0, name: "Renovação de CNH (outra UF)"
-renovacao.macro_service = renovacao
-renovacao.save
+renovacao_uf = Service.new price: 0, name: "Renovação de CNH (outra UF)"
+renovacao_uf.macro_service = renovacao_uf
+renovacao_uf.save
 
-mudanca = Service.new price: 0, name: "Mudança de Categoria (DF)"
-mudanca.macro_service = mudanca
-mudanca.save
+mudanca_df = Service.new price: 0, name: "Mudança de Categoria (DF)"
+mudanca_df.macro_service = mudanca_df
+mudanca_df.save
 
-mudanca = Service.new price: 0, name: "Mudança de Categoria (outra UF)"
-mudanca.macro_service = mudanca
-mudanca.save
+mudanca_uf = Service.new price: 0, name: "Mudança de Categoria (outra UF)"
+mudanca_uf.macro_service = mudanca_uf
+mudanca_uf.save
 
-adicao = Service.new price: 0, name: "Adição de Categoria (DF)"
-adicao.macro_service = adicao
-adicao.save
+adicao_df = Service.new price: 0, name: "Adição de Categoria (DF)"
+adicao_df.macro_service = adicao_df
+adicao_df.save
 
-adicao = Service.new price: 0, name: "Adição de Categoria (outra UF)"
-adicao.macro_service = adicao
-adicao.save
+adicao_uf = Service.new price: 0, name: "Adição de Categoria (outra UF)"
+adicao_uf.macro_service = adicao_uf
+adicao_uf.save
 
 instrutor = Service.new price: 0, name: "Instrutor, Diretor e Examinador"
 instrutor.macro_service = instrutor
