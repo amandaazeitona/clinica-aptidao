@@ -1,0 +1,82 @@
+<div id="modal-mudanca" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h3 class="modal-title">MUDANÇA DE CATEGORIA</h3>
+              </div>
+              <div class="modal-body">
+
+                <h3>DF</h3>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Modalidade</th>
+                            <th>Valor (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <% @services[3].normalize.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                        <tr>
+                            <td><%= service.name %></td>
+                            <td><%= service.price %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                </table>
+                <h3>Outra UF</h3>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Modalidade</th>
+                            <th>Valor (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <% @services[4].normalize.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                        <tr>
+                            <td><%= service.name %></td>
+                            <td><%= service.price %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                  <h3 class="emphasis">REQUISITOS PARA MUDANÇA:</h3>
+                  <br>
+                  <h4><%= image_tag("truck.png", :alt => "caminhao") %>        CATEGORIA "C"</h4>
+                  <p>Estar habilitado há, no mínimo, 1 (um) ano na categoria "B";</p>
+                  <br>
+                  <h4><%= image_tag("bus.png", :alt => "onibus") %>        CATEGORIA "D"</h4>
+                  <p>Estar habilitado há, no mínimo, 2 (dois) anos na categoria "B" ou no mínimo há um ano na categoria "C";</p>
+                  <p>Ter, no mínimo, 21 anos de idade;</p>
+                  <br>
+                  <h4><%= image_tag("big-truck.png", :alt => "grande caminhao") %>        CATEGORIA "E"</h4>
+                  <p>Estar habilitado há, no mínimo, 1 (um) ano na categoria "D";</p>
+                  <br>
+
+                  <h3 class="emphasis">COMO PROCEDER:</h3>
+                  <br>
+                  <p>Compareça à Clínica Aptidão com a documentação abaixo para a abertura do processo e realização dos exames.</p>
+                  <p>Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização do exame psicológico.</p>
+                  <table class="table table-condensed internal">
+                      <thead>
+                          <tr>
+                              <th>CNH Original</th>
+                          </tr>
+                          <tr>
+                              <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
+                          </tr>
+                      </thead>
+                  </table>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+              </div>
+          </div>
+          <!-- end Modal content-->
+      </div>
+</div>

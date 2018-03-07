@@ -6,6 +6,11 @@ $aptidao-azul-translucid: rgba(0, 36, 84, 0.7);
 body {
     font-family: 'Lato', Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
+
+a:hover, a:focus {
+  color: inherit;
+  text-decoration: inherit;
+}
 //******************* NAVBAR *************************************************//
 .navbar-default {
     background-color: $aptidao-azul;
@@ -197,9 +202,9 @@ hr {
     margin-bottom: 4em;
 
     >h3 {
-        color: $aptidao-azul;
-        font-weight: 600;
-        font-size: 22px;
+      color: $aptidao-azul;
+      font-weight: 600;
+      font-size: 22px;
     }
 
     >p {

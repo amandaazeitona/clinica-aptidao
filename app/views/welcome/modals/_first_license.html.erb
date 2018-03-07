@@ -1,0 +1,61 @@
+<div id="modal-primeira-habilitacao" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">1ª HABILITAÇÃO</h3>
+        </div>
+        <div class="modal-body">
+            <br>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Modalidade</th>
+                        <th>Valor (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% @services[0].normalize.sort_by{ |a| a[:price] }.each do |service| %>
+                    <tr>
+                        <td><%= service.name %></td>
+                        <td><%= service.price %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+            </table>
+            <br>
+            <br>
+
+            <h4>A primeira habilitação é emitida nas categorias "A" - Motocicleta, "B" - Automóvel de Passeio ou "AB" - Moto e Carro. </h4>
+             <br><br>
+
+            <h3 class="emphasis">COMO PROCEDER</h3>
+            <br>
+            <p>Não vá diretamente a uma auto-escola! Entre em contato com uma clínica credenciada. </p>
+
+            <p>Marque um horário para atendimento e encaminhe-se à Clínica Aptidão com os documentos abaixo para abertura do processo e realização dos exames: </p>
+            <br>
+            <table class="table table-condensed internal">
+                <thead>
+                    <tr>
+                        <th>Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe)</th>
+                    </tr>
+                    <tr>
+                        <th>CPF</th>
+                    </tr>
+                    <tr>
+                        <th>02 (duas) fotos 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos)</th>
+                    </tr>
+                </thead>
+            </table>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
+        </div>
+    </div>
+    <!-- end Modal content-->
+  </div>
+</div>

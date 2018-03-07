@@ -1,0 +1,75 @@
+<div id="modal-renovacao" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">RENOVAÇÃO DA CNH</h3>
+            </div>
+            <div class="modal-body">
+
+              <h3>DF</h3>
+              <table class="table table-condensed">
+                  <thead>
+                      <tr>
+                          <th>Modalidade</th>
+                          <th>Valor (R$)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% @services[1].normalize.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                      <tr>
+                          <td><%= service.name %></td>
+                          <td><%= service.price %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+              </table>
+              <h3>Outra UF</h3>
+              <table class="table table-condensed">
+                  <thead>
+                      <tr>
+                          <th>Modalidade</th>
+                          <th>Valor (R$)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% @services[2].normalize.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                      <tr>
+                          <td><%= service.name %></td>
+                          <td><%= service.price %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                  </tbody>
+              </table>
+              <br>
+              <br>
+
+              <h3 class="emphasis">COMO PROCEDER</h3>
+              <br>
+
+              <p>A renovação da carteira de motorista é feita de 5 em 5 anos até os 65 anos de idade e de 3 em 3 anos após essa idade.</p>
+              <p>Vencido esse prazo, dirija-se a Clínica Aptidão para realização dos exames.</p>
+              <p>Caso exerça atividade remunerada, ou seja, trabalhe com a carteira de motorista, será necessária a realização dos exames psicológicos.</p>
+              <br>
+              <table class="table table-condensed internal">
+                  <thead>
+                      <tr>
+                          <th>CNH Original</th>
+                      </tr>
+                      <tr>
+                          <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
+                      </tr>
+                  </thead>
+              </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+        <!-- end Modal content-->
+    </div>
+</div>

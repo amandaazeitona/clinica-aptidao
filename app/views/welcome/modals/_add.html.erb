@@ -1,0 +1,72 @@
+
+<div id="modal-adicao" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">ADIÇÃO DE CATEGORIA</h3>
+            </div>
+            <div class="modal-body">
+
+              <h3>DF</h3>
+              <table class="table table-condensed">
+                  <thead>
+                      <tr>
+                          <th>Modalidade</th>
+                          <th>Valor (R$)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% @services[5].normalize.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                      <tr>
+                          <td><%= service.name %></td>
+                          <td><%= service.price %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+              </table>
+              <h3>Outra UF</h3>
+              <table class="table table-condensed">
+                  <thead>
+                      <tr>
+                          <th>Modalidade</th>
+                          <th>Valor (R$)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% @services[6].normalize.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                      <tr>
+                          <td><%= service.name %></td>
+                          <td><%= service.price %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+              </table>
+              <br>
+              <br>
+              <p>Os condutores habilitados nas categorias "B", "C", "D" ou "E" poderão adicionar a categoria "A", e os condutores habilitados na categoria "A", poderão adicionar a categoria "B".</p>
+              <br>
+              <h3 class="emphasis">COMO PROCEDER</h3>
+              <p>Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização dos exames psicológicos.</p>
+              <p>Para adicionar uma categoria à sua CNH você deverá comparecer à Clínica Aptidão com os seguintes documentos:</p>
+              <table class="table table-condensed internal">
+                  <thead>
+                      <tr>
+                          <th>CNH Original</th>
+                      </tr>
+                      <tr>
+                          <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
+                      </tr>
+                  </thead>
+              </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+        <!-- end Modal content-->
+    </div>
+</div>

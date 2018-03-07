@@ -9,454 +9,77 @@
     </div>
     <div class="container">
         <div class="row">
-            <!-- "botao" e modal 1ª habilitacao -->
+            <!-- quadro 1ª habilitacao -->
             <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-primeira-habilitacao">
+                <%= link_to "#modal-primeira-habilitacao", class: "service-button", "data-toggle" => "modal" do %>
                     <div class="service-box">
                         <%= image_tag("primeira-habilitacao.png", :alt => "primeira habilitacao", :class => "service-image") %>
                         <h3>1ª Habilitação</h3>
                         <p class="text-muted">Quer tirar sua carteira? </p>
                         <p class="text-muted">Consulte aqui o passo a passo.</p>
                     </div>
-                </button>
-                <div id="modal-primeira-habilitacao" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">1ª HABILITAÇÃO</h3>
-                            </div>
-                            <div class="modal-body">
-                                <br>
-                                <table class="table table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>Modalidade</th>
-                                            <th>Valor (R$)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                      <% @first.sort_by{ |a| a[:price] }.each do |service| %>
-                                        <tr>
-                                            <td><%= service.name %></td>
-                                            <td><%= service.price %></td>
-                                        </tr>
-                                      <% end %>
-                                    </tbody>
-                                </table>
-                                <br>
-                                <br>
-
-                                <h4>A primeira habilitação é emitida nas categorias "A" - Motocicleta, "B" - Automóvel de Passeio ou "AB" - Moto e Carro. </h4>
-                                 <br><br>
-
-                                <h3 class="emphasis">COMO PROCEDER</h3>
-                                <br>
-                                <p>Não vá diretamente a uma auto-escola! Entre em contato com uma clínica credenciada. </p>
-
-                                <p>Marque um horário para atendimento e encaminhe-se à Clínica Aptidão com os documentos abaixo para abertura do processo e realização dos exames: </p>
-                                <br>
-                                <table class="table table-condensed internal">
-                                    <thead>
-                                        <tr>
-                                            <th>Identidade (Civil, Militar, Passaporte, Carteira de Trabalho ou Conselho de Classe)</th>
-                                        </tr>
-                                        <tr>
-                                            <th>CPF</th>
-                                        </tr>
-                                        <tr>
-                                            <th>02 (duas) fotos 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos)</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">FECHAR</button>
-                            </div>
-                        </div>
-                        <!-- end Modal content-->
-                    </div>
-                </div>
+                <% end %>
             </div>
 
-            <!-- "botao" e modal renovacao cnh -->
+            <!-- quadro renovacao cnh -->
             <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-renovacao">
-                    <div class="service-box">
-                        <%= image_tag("renovacao.png", :alt => "renovacao habilitacao", :class => "service-image") %>
-                        <h3>Renovação da CNH</h3>
-                        <p class="text-muted">Simples e Rápido. </p>
-                        <p class="text-muted">Saiba mais!</p>
-                    </div>
-                </button>
-                <div id="modal-renovacao" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">RENOVAÇÃO DA CNH</h3>
-                            </div>
-                            <div class="modal-body">
-
-                              <h3>DF</h3>
-                              <table class="table table-condensed">
-                                  <thead>
-                                      <tr>
-                                          <th>Modalidade</th>
-                                          <th>Valor (R$)</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                    <% @second.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                      <tr>
-                                          <td><%= service.name %></td>
-                                          <td><%= service.price %></td>
-                                      </tr>
-                                    <% end %>
-                                  </tbody>
-                              </table>
-                              <h3>Outra UF</h3>
-                              <table class="table table-condensed">
-                                  <thead>
-                                      <tr>
-                                          <th>Modalidade</th>
-                                          <th>Valor (R$)</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                    <% @third.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                      <tr>
-                                          <td><%= service.name %></td>
-                                          <td><%= service.price %></td>
-                                      </tr>
-                                    <% end %>
-                                  </tbody>
-                                  </tbody>
-                              </table>
-                              <br>
-                              <br>
-
-                              <h3 class="emphasis">COMO PROCEDER</h3>
-                              <br>
-
-                              <p>A renovação da carteira de motorista é feita de 5 em 5 anos até os 65 anos de idade e de 3 em 3 anos após essa idade.</p>
-                              <p>Vencido esse prazo, dirija-se a Clínica Aptidão para realização dos exames.</p>
-                              <p>Caso exerça atividade remunerada, ou seja, trabalhe com a carteira de motorista, será necessária a realização dos exames psicológicos.</p>
-                              <br>
-                              <table class="table table-condensed internal">
-                                  <thead>
-                                      <tr>
-                                          <th>CNH Original</th>
-                                      </tr>
-                                      <tr>
-                                          <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
-                                      </tr>
-                                  </thead>
-                              </table>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
-                        <!-- end Modal content-->
-                    </div>
-                </div>
-
+              <%= link_to "#modal-renovacao", class: "service-button", "data-toggle" => "modal" do %>
+                  <div class="service-box">
+                      <%= image_tag("renovacao.png", :alt => "renovacao habilitacao", :class => "service-image") %>
+                      <h3>Renovação da CNH</h3>
+                      <p class="text-muted">Simples e Rápido. </p>
+                      <p class="text-muted">Saiba mais!</p>
+                  </div>
+              <% end %>
             </div>
 
-            <!-- "botao" e modal mudanca de categoria -->
+            <!-- quadro mudanca de categoria -->
             <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-mudanca">
-                    <div class="service-box">
-                        <%= image_tag("mudanca.png", :alt => "mudança de categoria", :class => "service-image") %>
-                        <h3>Mudança de categoria</h3>
-                        <p class="text-muted">Sua categoria está nas exigências do Código de Trânsito?</p>
-                        <p class="text-muted">Verifique aqui!</p>
-                    </div>
-                </button>
-                <div id="modal-mudanca" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">MUDANÇA DE CATEGORIA</h3>
-                            </div>
-                            <div class="modal-body">
-
-                              <h3>DF</h3>
-                              <table class="table table-condensed">
-                                  <thead>
-                                      <tr>
-                                          <th>Modalidade</th>
-                                          <th>Valor (R$)</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                    <% @fourth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                      <tr>
-                                          <td><%= service.name %></td>
-                                          <td><%= service.price %></td>
-                                      </tr>
-                                    <% end %>
-                                  </tbody>
-                              </table>
-                              <h3>Outra UF</h3>
-                              <table class="table table-condensed">
-                                  <thead>
-                                      <tr>
-                                          <th>Modalidade</th>
-                                          <th>Valor (R$)</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                    <% @fifth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                      <tr>
-                                          <td><%= service.name %></td>
-                                          <td><%= service.price %></td>
-                                      </tr>
-                                    <% end %>
-                                  </tbody>
-                              </table>
-                              <br>
-                              <br>
-                                <h3 class="emphasis">REQUISITOS PARA MUDANÇA:</h3>
-                                <br>
-                                <h4><%= image_tag("truck.png", :alt => "caminhao") %>        CATEGORIA "C"</h4>
-                                <p>Estar habilitado há, no mínimo, 1 (um) ano na categoria "B";</p>
-                                <br>
-                                <h4><%= image_tag("bus.png", :alt => "onibus") %>        CATEGORIA "D"</h4>
-                                <p>Estar habilitado há, no mínimo, 2 (dois) anos na categoria "B" ou no mínimo há um ano na categoria "C";</p>
-                                <p>Ter, no mínimo, 21 anos de idade;</p>
-                                <br>
-                                <h4><%= image_tag("big-truck.png", :alt => "grande caminhao") %>        CATEGORIA "E"</h4>
-                                <p>Estar habilitado há, no mínimo, 1 (um) ano na categoria "D";</p>
-                                <br>
-
-                                <h3 class="emphasis">COMO PROCEDER:</h3>
-                                <br>
-                                <p>Compareça à Clínica Aptidão com a documentação abaixo para a abertura do processo e realização dos exames.</p>
-                                <p>Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização do exame psicológico.</p>
-                                <table class="table table-condensed internal">
-                                    <thead>
-                                        <tr>
-                                            <th>CNH Original</th>
-                                        </tr>
-                                        <tr>
-                                            <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
-                        <!-- end Modal content-->
-                    </div>
-                </div>
-
+              <%= link_to "#modal-mudanca", class: "service-button", "data-toggle" => "modal" do %>
+                  <div class="service-box">
+                      <%= image_tag("mudanca.png", :alt => "mudança de categoria", :class => "service-image") %>
+                      <h3>Mudança de categoria</h3>
+                      <p class="text-muted">Sua categoria está nas exigências do Código de Trânsito?</p>
+                      <p class="text-muted">Verifique aqui!</p>
+                  </div>
+              <% end %>
             </div>
 
-            <!-- "botao" e modal adicao de categoria -->
+            <!-- quadro adicao de categoria -->
             <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-adicao">
-                    <div class="service-box">
-                        <%= image_tag("adicionar.png", :alt => "adicionar habilitacao", :class => "service-image") %>
-                        <h3>Adição de categoria</h3>
-                        <p class="text-muted">Já é habilitado e quer adicionar outra categoria? </p>
-                        <p class="text-muted">Clique aqui!</p>
-                    </div>
-                </button>
-                <div id="modal-adicao" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">ADIÇÃO DE CATEGORIA</h3>
-                            </div>
-                            <div class="modal-body">
-
-                              <h3>DF</h3>
-                              <table class="table table-condensed">
-                                  <thead>
-                                      <tr>
-                                          <th>Modalidade</th>
-                                          <th>Valor (R$)</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                    <% @sixth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                      <tr>
-                                          <td><%= service.name %></td>
-                                          <td><%= service.price %></td>
-                                      </tr>
-                                    <% end %>
-                                  </tbody>
-                              </table>
-                              <h3>Outra UF</h3>
-                              <table class="table table-condensed">
-                                  <thead>
-                                      <tr>
-                                          <th>Modalidade</th>
-                                          <th>Valor (R$)</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                    <% @seventh.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                      <tr>
-                                          <td><%= service.name %></td>
-                                          <td><%= service.price %></td>
-                                      </tr>
-                                    <% end %>
-                                  </tbody>
-                              </table>
-                              <br>
-                              <br>
-                              <p>Os condutores habilitados nas categorias "B", "C", "D" ou "E" poderão adicionar a categoria "A", e os condutores habilitados na categoria "A", poderão adicionar a categoria "B".</p>
-                              <br>
-                              <h3 class="emphasis">COMO PROCEDER</h3>
-                              <p>Caso exerça atividade remunerada, ou seja, trabalhe com a CNH, será necessária a realização dos exames psicológicos.</p>
-                              <p>Para adicionar uma categoria à sua CNH você deverá comparecer à Clínica Aptidão com os seguintes documentos:</p>
-                              <table class="table table-condensed internal">
-                                  <thead>
-                                      <tr>
-                                          <th>CNH Original</th>
-                                      </tr>
-                                      <tr>
-                                          <th>01 (uma) foto 3x4 (colorida, com fundo branco, recente, não danificada e sem óculos, não podendo ser a foto que está em sua CNH anterior.)</th>
-                                      </tr>
-                                  </thead>
-                              </table>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
-                        <!-- end Modal content-->
-                    </div>
-                </div>
-
+              <%= link_to "#modal-adicao", class: "service-button", "data-toggle" => "modal" do %>
+                  <div class="service-box">
+                      <%= image_tag("adicionar.png", :alt => "adicionar habilitacao", :class => "service-image") %>
+                      <h3>Adição de categoria</h3>
+                      <p class="text-muted">Já é habilitado e quer adicionar outra categoria? </p>
+                      <p class="text-muted">Clique aqui!</p>
+                  </div>
+              <% end %>
             </div>
 
 
-            <!-- "botao" e modal atividade remunerada -->
+            <!-- quadro atividade remunerada -->
             <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-remunerada">
-                    <div class="service-box">
-                        <%= image_tag("coin.png", :alt => "instrutor diretor de auto-escola e examinador", :class => "service-image") %>
-                        <h3>Inclusão de Atividade Remunerada</h3>
-                        <p class="text-muted">Precisa trabalhar com mobilidade?</p>
-                        <p class="text-muted">Saiba como!</p>
-                    </div>
-                </button>
-                <div id="modal-remunerada" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">INCLUSÃO DE ATIVIDADE REMUNERADA</h3>
-                            </div>
-                            <div class="modal-body">
-                            <table class="table table-condensed">
-                                <thead>
-                                    <tr>
-                                        <th>Modalidade</th>
-                                        <th>Valor (R$)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  <% @eighth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                    <tr>
-                                        <td><%= service.name %></td>
-                                        <td><%= service.price %></td>
-                                    </tr>
-                                  <% end %>
-                                </tbody>
-                            </table>
-
-                            <p>Para exercer atividade remunerada com a sua habilitação é necessário realizar exames psicológicos para incluir a autorização na CNH. </p>
-                            <p>Entre em contato para agendarmos os exames.</p>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
-                        <!-- end Modal content-->
-                    </div>
-                </div>
-
-
-                <!-- "botao" e modal instrutor -->
-
-
-
+              <%= link_to "#modal-remunerada", class: "service-button", "data-toggle" => "modal" do %>
+                  <div class="service-box">
+                      <%= image_tag("coin.png", :alt => "instrutor diretor de auto-escola e examinador", :class => "service-image") %>
+                      <h3>Inclusão de Atividade Remunerada</h3>
+                      <p class="text-muted">Precisa trabalhar com mobilidade?</p>
+                      <p class="text-muted">Saiba como!</p>
+                  </div>
+              <% end %>
             </div>
 
-            <!-- "botao" e modal instrutor -->
+            <!-- quadro instrutor -->
             <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                <button type="button" class="service-button" data-toggle="modal" data-target="#modal-instrutor">
-                    <div class="service-box">
-                        <%= image_tag("credenciamento.png", :alt => "instrutor diretor de auto-escola e examinador", :class => "service-image") %>
-                        <h3>Instrutor, Diretor de auto-escola e Examinador</h3>
-                        <p class="text-muted">Seja um profissional da área de trânsito. </p>
-                        <p class="text-muted">Saiba como!</p>
-                    </div>
-                </button>
-                <div id="modal-instrutor" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">Instrutor, Diretor de Auto-Escola e Examinador </h3>
-                            </div>
-                            <div class="modal-body">
-                            <table class="table table-condensed">
-                                <thead>
-                                    <tr>
-                                        <th>Modalidade</th>
-                                        <th>Valor (R$)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  <% @ninth.sort_by{ |a| a[:name] }.reverse.each do |service| %>
-                                    <tr>
-                                        <td><%= service.name %></td>
-                                        <td><%= service.price %></td>
-                                    </tr>
-                                  <% end %>
-                                </tbody>
-                            </table>
-
-                            <p>A Clínica Aptidão também realiza exames psicológicos para ingresso no curso de instrutor, examinador e diretor de auto-escola.</p>
-                            <p>Entre em contato para agendarmos os exames.</p>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
-                        <!-- end Modal content-->
-                    </div>
-                </div>
-
-
-
+              <%= link_to "#modal-instrutor", class: "service-button", "data-toggle" => "modal" do %>
+                  <div class="service-box">
+                      <%= image_tag("credenciamento.png", :alt => "instrutor diretor de auto-escola e examinador", :class => "service-image") %>
+                      <h3>Instrutor, Diretor de auto-escola e Examinador</h3>
+                      <p class="text-muted">Seja um profissional da área de trânsito. </p>
+                      <p class="text-muted">Saiba como!</p>
+                  </div>
+              <% end %>
             </div>
 
 
