@@ -222,6 +222,29 @@ hr {
     height: 110px;
 }
 
+@media (max-width: 750px) {
+  .little-container {
+    display: none;
+  }
+}
+
+.service-image-sm {
+  height: 50px;
+  padding: 0 5px;
+}
+
+.little-row {
+  padding: 0px;
+  position: relative;
+  right: -50%;
+}
+
+.little-container {
+  position: absolute;
+  right: 50%;
+  bottom: 1em;
+}
+
 
 .service-button {
     background-color: transparent;
