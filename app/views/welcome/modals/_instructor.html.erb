@@ -1,0 +1,38 @@
+<div id="modal-instrutor" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Instrutor, Diretor de Auto-Escola e Examinador </h3>
+            </div>
+            <div class="modal-body">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Modalidade</th>
+                        <th>Valor (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% @services[8].normalize.sort_by{ |a| a[:name] }.reverse.each do |service| %>
+                    <tr>
+                        <td><%= service.name %></td>
+                        <td><%= service.price %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+            </table>
+
+            <p>A Clínica Aptidão também realiza exames psicológicos para ingresso no curso de instrutor, examinador e diretor de auto-escola.</p>
+            <p>Entre em contato para agendarmos os exames.</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+        <!-- end Modal content-->
+    </div>
+</div>

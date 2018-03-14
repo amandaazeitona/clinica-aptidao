@@ -48,6 +48,10 @@ remunerada = Service.new price: 0, name: "Inclusão de Atividade Remunerada"
 remunerada.macro_service = remunerada
 remunerada.save
 
+instrutor = Service.new price: 0, name: "Instrutor, Diretor e Examinador"
+instrutor.macro_service = instrutor
+instrutor.save
+
 a = Service.new price: 633.08, name: "Categoria A", macro_service: habilitacao
 a.save
 
