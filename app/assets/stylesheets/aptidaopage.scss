@@ -310,6 +310,12 @@ hr {
 
 @media(min-width:993px){
 
+    .mobilephones{
+        pointer-events: none;
+        cursor: default;
+        text-decoration:none;
+        color:#1a128f;
+    }
 
     .container-fluid {
         width: 90%;
@@ -585,7 +591,23 @@ hr {
     }
 }
 
-@media(min-height:600px)and(max-height:700px) {
+@media(min-height:500px)and(max-height:700px) {
+
+    header .header-content .header-content-inner h1 {
+        font-size: 55px !important;
+    }
+
+    header .header-content .header-content-inner p {
+        font-size: 20px;
+        margin-bottom: 1em;
+    }
+
+    h4.phones {
+        font-size: 30px;
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+    }
+  
 
   h2 {
     font-size: 25px;
