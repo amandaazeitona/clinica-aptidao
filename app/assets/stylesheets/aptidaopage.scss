@@ -222,6 +222,29 @@ hr {
     height: 110px;
 }
 
+@media (max-width: 750px) {
+  .little-container {
+    display: none;
+  }
+}
+
+.service-image-sm {
+  height: 50px;
+  padding: 0 5px;
+}
+
+.little-row {
+  padding: 0px;
+  position: relative;
+  right: -50%;
+}
+
+.little-container {
+  position: absolute;
+  right: 50%;
+  bottom: 1em;
+}
+
 
 .service-button {
     background-color: transparent;
@@ -591,22 +614,9 @@ hr {
     }
 }
 
-@media(min-height:500px)and(max-height:700px) {
+@media(min-height:600px)and(max-height:700px) {
 
-    header .header-content .header-content-inner h1 {
-        font-size: 55px !important;
-    }
-
-    header .header-content .header-content-inner p {
-        font-size: 20px;
-        margin-bottom: 1em;
-    }
-
-    h4.phones {
-        font-size: 30px;
-        margin-top: 0.1em;
-        margin-bottom: 0.1em;
-    }
+    
   
 
   h2 {
