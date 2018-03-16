@@ -92,7 +92,13 @@ a:hover, a:focus {
 header {
     background-image: asset-data-url("header2.png");
     color: $aptidao-azul;
+    position: relative;
+
+    .container {
+        padding: 0px;
+    }
 }
+
 
 header .header-content .header-content-inner h1 {
     font-size: 65px;
@@ -152,7 +158,7 @@ hr {
 }
 
 .container {
-    width: 90%;
+    // width: 90%;
 }
 
 
@@ -187,7 +193,11 @@ hr {
 }
 
 //******************* SERVIÇOS *************************************************//
-
+.modal-body {
+    h4 {
+        text-align: center;
+    }
+}
 
 
 //******************* CONTATO ***********************************************//
@@ -230,27 +240,32 @@ hr {
     height: 110px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .little-container {
-    display: none;
+    display: none!important;
   }
 }
 
 .service-image-sm {
-  height: 50px;
-  padding: 0 5px;
+  height: 5.5em;
+  margin: 5px;
 }
 
-.little-row {
-  padding: 0px;
-  position: relative;
-  right: -50%;
-}
 
 .little-container {
-  position: absolute;
-  right: 50%;
-  bottom: 1em;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-color: $aptidao-azul;
+    border-bottom: none;
+
+    text-align: center;
+    transform: translate(-50%, 0);
+
 }
 
 
@@ -423,13 +438,10 @@ hr {
     .collapse.navbar-collapse {
         height: 100%;
     }
+    .little-container {
+        display: none;
+    }
 
-    // ul.nav.navbar-nav.navbar-right {
-    //     height: 100%;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    // }
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
@@ -451,6 +463,10 @@ hr {
 
     header .header-content .header-content-inner p {
         font-size: 21px;
+    }
+
+    .container {
+        width: 90%;
     }
 
     .mvv {
@@ -494,18 +510,26 @@ hr {
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 35px !important;
+        font-size: 33px !important;
     }
 
     header .header-content .header-content-inner p {
         font-size: 24px;
     }
 
+    .little-container {
+        display: none;
+    }
+
     h4.phones {
-        font-size: 23px;
+        font-size: 30px;
         font-weight: 600;
         margin-bottom: 0.3em;
         padding: 10px;
+    }
+
+    .container {
+        width: 90%;
     }
 
 
@@ -567,6 +591,9 @@ hr {
         padding: 10px;
     }
 
+    .container {
+        width: 90%;
+    }
 
 
     .mvv {
@@ -622,10 +649,39 @@ hr {
     }
 }
 
-@media(min-height:600px)and(max-height:700px) {
+
+@media(min-height:1100px) {
+    .little-container {
+        display:none!important;
+    }
+}
+
+
+
+@media(min-height:650px)and(max-height:700px) {
+
+    .service-image-sm {
+        height: 3.5em;
+      }
 
     
-  
+  h1 {
+      font-size: 54px!important;
+  }
+
+  h5 {
+      font-size: 12px;
+  }
+
+  header .header-content .header-content-inner p {
+    font-size: 19px;
+    margin-bottom: 20px;
+  }
+
+  h4.phones {
+      font-size: 30px;
+      padding: auto;
+  }
 
   h2 {
     font-size: 25px;
