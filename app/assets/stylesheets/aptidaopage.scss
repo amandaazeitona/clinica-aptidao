@@ -256,15 +256,10 @@ hr {
     padding: 1em;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: auto;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
-    border-style: solid;
-    border-color: $aptidao-azul;
-    border-bottom: none;
 
     text-align: center;
-    transform: translate(-50%, 0);
 
 }
 
