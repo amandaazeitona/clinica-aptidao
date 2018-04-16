@@ -102,7 +102,7 @@ header {
 
 
 header .header-content .header-content-inner h1 {
-    font-size: 65px;
+    font-size: 4em;
     font-family: 'Lato';
 }
 
@@ -112,6 +112,16 @@ header .header-content .header-content-inner p {
      color: $aptidao-azul;
 }
 
+.test {
+    padding: 1px;
+    margin: 3em 0;
+}
+
+@media (max-width: 700px) {
+    .test {
+        margin: 0;
+    }
+}
 h4.phones {
     font-family: 'Lato', sans-serif;
     font-size: 35px;
@@ -124,6 +134,7 @@ h4.phones {
     border-style: solid;
     border-color: $aptidao-azul;
     border-width: 3px;
+    display: inline;
 
     a:link, a:visited, a:active {
         text-decoration: none;
@@ -248,7 +259,7 @@ hr {
 }
 
 .service-image-sm {
-  height: 5.5em;
+  width: 25%;
   margin: 5px;
 }
 
@@ -259,7 +270,7 @@ hr {
     bottom: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
-
+    
     text-align: center;
 
     h4 {
@@ -269,11 +280,25 @@ hr {
 
 }
 
+@media (max-width: 1500px) {
+    
+    .little-container {
+    
+        h4 {
+            font-size: 0.9em;
+        }
+    
+    }
+
+}
+
 
 .service-button {
     background-color: transparent;
     border: none;
     padding: 0px;
+    width: 100%;
+    display: block;
 }
 
 .modal .modal-dialog {
@@ -353,9 +378,91 @@ hr {
     background-color:$aptidao-azul;
 }
 
+@media(min-width:1701px) {
+    .mobilephones{
+        pointer-events: none;
+        cursor: default;
+        text-decoration:none;
+        color:#1a128f;
+    }
+
+    .container-fluid {
+        width: 90%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 27px;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+       // color: $aptidao-azul;
+       @include v-align;
+    }
+
+    .collapse.navbar-collapse {
+        height: 100% !important;
+    }
+
+    .collapse.navbar-collapse.in {
+        height: 100% !important;
+        background-color: #fff;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        font-size: 16px;
+    }
+
+    .fa.fa-facebook-square {
+        font-size: 30px;
+    }
+
+    ul.nav.navbar-nav.navbar-right {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
 
-@media(min-width:993px){
+    .modal .modal-dialog {
+
+        width: 70%;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .internal {
+        width: 60%;
+    }
+
+}
+
+
+
+@media(min-width:993px)and(max-width:1700px){
+
+    header .header-content .header-content-inner h1 {
+        font-size: 4em !important;
+    }
+
+    header .header-content .header-content-inner p {
+        font-size: 1.4em !important;
+    }
+
+    h4.phones {
+        font-size: 2.3em;
+    }
+
+    .test {
+        margin: 2.5em 0;
+    }
 
     .mobilephones{
         pointer-events: none;
@@ -511,7 +618,7 @@ hr {
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 33px !important;
+        font-size: 2.2em !important;
     }
 
     header .header-content .header-content-inner p {
@@ -523,6 +630,7 @@ hr {
     }
 
     h4.phones {
+        display: block;
         font-size: 30px;
         font-weight: 600;
         margin-bottom: 0.3em;
@@ -578,7 +686,7 @@ hr {
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 28px !important;
+        font-size: 1.8em !important;
     }
 
     header .header-content .header-content-inner p {
@@ -586,10 +694,10 @@ hr {
     }
 
     h4.phones {
+        display: block;
         font-size: 23px;
         font-weight: 600;
         margin-bottom: 0.3em;
-        padding: 10px;
     }
 
     .container {
