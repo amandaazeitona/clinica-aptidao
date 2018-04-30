@@ -767,7 +767,7 @@ hr {
 
 
 
-@media(min-height:650px)and(max-height:700px) {
+@media(min-height:620px)and(max-height:700px) {
 
     .navbar {
         height: 3.125em;
@@ -789,6 +789,10 @@ hr {
         font-size: 28px;
     }
 
+    hr {
+        margin-bottom: 3em;
+    }
+
     
 
     .little-container {
@@ -801,7 +805,10 @@ hr {
         height: 3em;
       }
 
-    
+    .second-row {
+        margin-top: 3em;
+    }
+
   h1 {
       font-size: 55px!important;
   }
@@ -832,8 +839,13 @@ hr {
     padding: 50px 0px;
   }
 
+  .service-box {
+    margin-top: 1.3em;
+    margin-bottom: 3em;
+  }
+
   .service-image {
-    height: 90px;
+    height: 75px;
   }
 
   p.text-muted {
@@ -847,7 +859,11 @@ hr {
   }
 
   .contact-section > p {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .contact-section > .fa {
+      font-size: 45px!important;
   }
 
   iframe {
